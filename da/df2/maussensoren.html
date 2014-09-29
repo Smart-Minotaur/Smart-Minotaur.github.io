@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: Maussensoren</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/df2/maussensoren.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Maussensoren </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#sensor">PLN2033 Sensor</a></li>
+<li class="level1"><a href="#hardware-setup">Hardware Setup</a></li>
+<li class="level1"><a href="#spi-device-tree">Linux SPI Treiber und Device Tree</a></li>
+<li class="level1"><a href="#software">Mouse Monitor Software</a><ul><li class="level2"><a href="#comp">Kompilierung</a></li>
+<li class="level2"><a href="#pcNode">Mouse Monitor PC</a></li>
+<li class="level2"><a href="#bbbNode">Mouse Monitor Beagle</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#communication">Kommunikation</a></li>
+<li class="level1"><a href="#calibration">Kalibrierung</a></li>
+<li class="level1"><a href="#localization">Berechnung der Position und Ausrichtung des Roboters</a><ul><li class="level2"><a href="#ausgang">Ausgangssituation</a></li>
+<li class="level2"><a href="#ber">Berechnung</a></li>
+<li class="level2"><a href="#impl">Implementierung</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#problems">Probleme</a><ul><li class="level2"><a href="#p1">Schwierige Fehlersuche</a></li>
+<li class="level2"><a href="#p2">Lego</a></li>
+<li class="level2"><a href="#p3">Lift-Bit Problem</a></li>
+<li class="level2"><a href="#p4">Median Filter Problem und WLAN Latenz</a></li>
+<li class="level2"><a href="#p5">SPI Device Tree</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#fazit">Fazit und Erkenntnisse</a></li>
+<li class="level1"><a href="#improvement">Verbesserungen</a></li>
+</ul>
+</div>
+<div class="textblock"><p>Der im Projekt verwendete Roboter stellt für die Odometrie Motoren zur Verfügung. Diese bieten jedoch eine sehr geringe Genauigkeit und Zuverlässigkeit. Zusätzlich kann sich dies je nach Fahrfläche verschlechtern (Räder drehen durch). Um die Odometrie zu verbessern werden im Smart-Minotaur Projekt zusätzlich Maussensoren von herkömmlichen Gaming-Computermäusen verwendet. Diese messen die zurückgelegte X- und Y-Distanz indem die mithilfe von Lasern erzeugten Bilder der Oberfläche verarbeitet werden. Die in diesem Projekt verwendete Sensoren sind die Philips PLN2033 twin-eye Laser Sensoren. Diese verfügen über eine sehr hohe Präzision (bis zu 6400 CPI - Counts Per Inch) beim Messen der zurückgelegten X- und Y-Distanzwerte.</p>
+<h1><a class="anchor" id="sensor"></a>
+PLN2033 Sensor</h1>
+<p>In diesem Abschnitt werden die wichtigsten Funktionen des PLN2033 Sensors erläutert. Weitere Informationen befinden sich im Datenblatt.</p>
+<div class="image">
+<img src="../../mouse_sensor.jpg" alt="mouse_sensor.jpg"/>
+<div class="caption">
+Maussensor von unten</div></div>
+<p> Der PLN2033 besitzt verschiedene 16-Bit Register mit welchen dieser konfiguriert und gesteuert werden kann. Es werden zwei Laser verwendet, um die X- und Y-Positionsänderungen zu messen. Mithilfe dieser Laser werden Bilder der Oberfläche erstellt. Intern verarbeitet ein DSP (digital signal processor) diese Bilder und bestimmt aus diesen den zurückgelegten Weg. Die Auflösung kann von 100 bis 6400 CPI eingestellt werden. CPI (counts per inch) bestimmt wie oft der Sensor pro Inch (2.54cm) die internen Zähler erhöht. Daher bestimmen die CPI-Einstellung die Auflösung des Sensors. Die Ansteuerung des Sensors erfolgt über SPI und kann mit bis zu 8Mhz (Linux SPI Treiber Clock) betrieben werden. Der PLN2033 benötigt zum Arbeiten 3.3V.</p>
+<h1><a class="anchor" id="hardware-setup"></a>
+Hardware Setup</h1>
+<p>Das Beagle Bone Black (BBB) besitzt zwei SPI Ports. SPI1 wird verwendet, da zwei PLN2033 Sensoren angeschlossen werden und dieser im Gegensatz zu SPI0 zwei Chip-Selects besitzt.</p>
+<div class="image">
+<img src="../../sensor_beagle.jpg" alt="sensor_beagle.jpg"/>
+<div class="caption">
+Shield zum Anschließen zweier Sensoren über SPI</div></div>
+ <div class="image">
+<img src="../../bbb_proto.jpg" alt="bbb_proto.jpg"/>
+<div class="caption">
+Shield zum Anschließen zweier Sensoren über SPI</div></div>
+ <div class="image">
+<img src="../../fritzing.png" alt="fritzing.png"/>
+<div class="caption">
+Breadboard Plan</div></div>
+ <h1><a class="anchor" id="spi-device-tree"></a>
+Linux SPI Treiber und Device Tree</h1>
+<p>Zum Ansteuern des PLN2033 wird der SPI-Bus verwendet. Für das Smart-Minotaur Projekt wurden zwei Sensoren an den Roboter montiert (Nur einer wird benötigt, um Position und Ausrichtung zu bestimmen). Da zum Ansteuern von zwei Slaves auf dem SPI Bus zwei Chip-Selects benötigt werden wird der SPI1 Port des Beagle Bones verwendet. Um Daten zu Senden und Empfangen wird der Linux spidev Treiber verwendet, welcher rudimentäre Funktionen anbietet. Um den SPI1 Port benutzen zu können muss dieser erst im Device Tree registriert werden. Dafür wird ein Device Tree source file benötigt (dts), welche die korrekten Pins, Register und Funktionalitäten des SPI Gerätes spezifiziert. Diese Datei wird kompiliert und im Linux Kernel aktiviert. Wichtig ist das HDMI des BBB auszuschalten, da dieses auch SPI1 Ports verwendet und die Kommunikation stören würde. Nach erfolgreicher Aktivierung kann auf die Slaves über Gerätedateien zugegriffen werden:</p>
+<pre class="fragment">/dev/spidev1.0 CS0
+/dev/spidev1.1 CS1
+</pre><h1><a class="anchor" id="software"></a>
+Mouse Monitor Software</h1>
+<p>Die Mouse Monitor Software wird zum Testen, Debuggen und Überprüfen der Maussensoren verwendet. Die Anwendung verfügt über eine Vielzahl von Funktionen. Sie besteht aus zwei Teilen:</p>
+<ul>
+<li>Mouse Monitor Beagle (mm_b)</li>
+<li>Mouse Monitor PC (mm_p)</li>
+</ul>
+<p>Zur Kommunikation wird das ROS Message System verwendet. Daher sind beide Teile als ROS Packages realisiert. Entwickelt wurden beide Teile in C++. Zur Darstellung der Daten auf dem PC wird Qt verwendet. Die pln_minotaur Bibliothek wird zum Ansteuern der Sensoren benutzt.</p>
+<p>Eine genaue Beschreibung der pln_minotaur Bibliothek befindet sich auf folgender Seite: <a class="el" href="../../d7/d79/pln_minotaur.html">pln_minotaur</a></p>
+<div class="image">
+<img src="../../mm_software.png" alt="mm_software.png"/>
+<div class="caption">
+Mouse Monitor Packages</div></div>
+ <h2><a class="anchor" id="comp"></a>
+Kompilierung</h2>
+<p>Die x86 Version der pln_minotaur Bibliothek muss beim Kompilieren des mm_p Package dazu gelinkt werden, da daraus Datenstrukturen verwendet werden. Zum Erstellen beider Teile kann das mitgelieferte compile-script verwendet werden. Da das cross-kompilieren von ROS nicht unterstützt wird, muss der BBB Teil direkt auf dem BBB kompiliert werden.</p>
+<pre class="fragment"># Auf PC: Mouse Monitor PC
+./compile mm_p
+
+# Auf BBB: Mouse Monitor Beagle
+./compile mm_b
+</pre><h2><a class="anchor" id="pcNode"></a>
+Mouse Monitor PC</h2>
+<p>Die PC Node empfängt die Sensordaten, verarbeitet diese und stellt sie grafisch dar. Über diese Anwendung kann die CPI Auflösung der Sensoren eingestellt werden. Zusätzlich kann eine variable sample rate der GUI konfiguriert werden (meist 15-100Hz). Im folgenden werden einige Features Der Anwendung erklärt.</p>
+<div class="image">
+<img src="../../mm_pc1.png" alt="mm_pc1.png"/>
+<div class="caption">
+Mouse Monitor PC</div></div>
+<p> Features:</p>
+<ul>
+<li>Position, Ausrichtung und zurückgelegter Weg des Roboters sowie der Sensoren wird auf einer Karte dargestellt.</li>
+<li>Kalibrierungsfunktion für die Sensoren</li>
+<li>Darstellung der Sensorkonfigurationen</li>
+<li>Einstellen der Auflösung beider Sensoren</li>
+<li>Konfigurierbare sample rate des PC Teils</li>
+<li>Darstellung aller Sensorregister</li>
+<li>Verschiedene Darstellungen der Displacement Daten ** Direction Widget ** Path Widget ** Graphen ** Plain Data List</li>
+<li>Debugging feature zum manuellen Abfragen der Sensor Daten</li>
+<li>Optionaler Median Filter mit dynamisch veränderbaren Parametern kann jeweils für Sensor 1 oder Sensor 2 aktiviert werden</li>
+</ul>
+<p>TODO: Bild mit disp. Graphen</p>
+<h2><a class="anchor" id="bbbNode"></a>
+Mouse Monitor Beagle</h2>
+<p>Diese Anwendung ist für das Auslesen der Maussensor Displacement und Speed Daten zuständig und verwendet dafür die pln_minotaur Bibliothek. Daten werden mit einer 1kHz Frequenz ausgelesen und aufsummiert. Auf Anfrage der PC Node sendet die Applikation die gesammelten Daten zur PC Node. Zusätzlich bietet diese Funktionen um von der PC Node die Auflösung (CPI) der Sensoren zu setzen sowie zum Abfragen des Status der Sensoren.</p>
+<h1><a class="anchor" id="communication"></a>
+Kommunikation</h1>
+<p>Für die WLAN Kommunikation zwischen Beagle Bone und PC existiert jeweils eine ROS Node. Dabei werden ROS Services verwendet. Mouse Monitor PC kann in konfigurierbaren Intervallen die Sensordaten abfragen.</p>
+<p>Beim Abfragen der Sensordaten schickt die Beagle Bone Node folgende ROS Message:</p>
+<pre class="fragment">// MouseMonitorSensorData.msg
+
+string id
+float64 x_disp
+float64 y_disp
+float64 x_speed
+float64 y_speed
+</pre><p>Zusätzlich existieren Messages/Services zum Setzen der Sensor Auflösung, sowie zum Abfragen der Sensorkonfiguration.</p>
+<pre class="fragment">// MouseMonitorSensorSettings.msg
+
+string spiDevice
+uint16 status_register
+uint16 delta_x_disp_register
+uint16 delta_y_disp_register
+uint16 command_high_register
+uint16 command_low_register
+uint16 memory_pointer_register
+uint16 memory_data_register
+uint16 mode_control_register
+uint16 power_control_register
+uint16 mode_status_register
+uint16 system_control_register
+uint16 miscellaneous_register
+uint16 interrupt_output_register
+</pre><p>Die Sensor Displacement-Werte werden mit einer konfigurierbaren sample rate (zum Beispiel 15Hz) vom PC-Teil abgefragt. Pro Anfrage schickt die BBB Node die intern mit 1kHz aufsummierten Werte zurück.</p>
+<div class="image">
+<img src="../../mm_communication.png" alt="mm_communication.png"/>
+<div class="caption">
+Kommunikation zwischen BBB und PC</div></div>
+ <h1><a class="anchor" id="calibration"></a>
+Kalibrierung</h1>
+<p>Bei der Berechnung der Position und der Ausrichtung des Roboters wird eine korrekte Montierung der Maussensoren vorausgesetzt. Um exakte Berechnungen durchführen zu können, müssen die Sensoren richtig in Fahrtrichtung ausgerichtet sein. Das bedeutet, dass sich bei einer Vorwärtsbewegung nur die Y-Werte ändern. Da eine korrekte Montierung sehr schwierig ist (und das durch das Lego ohnehin unmöglich ist) müssen die Sensoren kalibriert werden um den Fehler der schrägen Montierung auszugleichen.</p>
+<p>Über die GUI kann ein Kalibrierungswizard gestartet werden. Beim Kalibrieren wird die Gesamtdistanz einer gefahrenen Geradeausfahrt gemessen und der Winkel gegenüber der idealen Geradeausfahrt bestimmt. Alle folgenden Messdaten (Vektoren) werden mithilfe einer 2D Rotationsmatrix um diesen Winkel gedreht.</p>
+<div class="image">
+<img src="../../rotationmatrix.png" alt="rotationmatrix.png"/>
+<div class="caption">
+2D Rotationsmatrix</div></div>
+<p> Folgendes Bild zeigt eine Geradeausfahrt ohne Kalibrierung. Es ist deutlich der Drift des Roboters zu erkennen.</p>
+<div class="image">
+<img src="../../forward_no_calibration.png" alt="forward_no_calibration.png"/>
+<div class="caption">
+Geradeausfahrt ohne Kalibrierung</div></div>
+<p> Beim Kalibrieren wird der Winkel gegenüber der idealen Geradeausfahrt bestimmt. Zu beachten ist hierbei, dass der Korrektur-Winkel anhand der rohen Messdaten berechnet wird, nicht aus den verarbeiteten (Roboter Position und Ausrichtung) wie im Bild dargestellt.</p>
+<p>Nach einer Geradeausfahrt wird der Winkels zwischen idealer Geradeausfahrt (X-Anteil = 0) und gemessener Geradeausfahrt (X-Anteil != 0 wegen schräger Montierung) bestimmt:</p>
+<pre class="fragment">if (s1YDisplacement &gt; 0)
+        atanRealDistance = M_PI/2;
+else if (s1YDisplacement &lt; 0)
+        atanRealDistance = -M_PI/2;
+
+s1AngleOffset = atanRealDistance - std::atan2(s1YDisplacement, s1XDisplacement);
+</pre><div class="image">
+<img src="../../calibration.png" alt="calibration.png"/>
+<div class="caption">
+Berechnung des Korrekturwinkels</div></div>
+<p> Anschließend kann die Rotationsmatrix für alle empfangenen Messwerte angewendet werden:</p>
+<pre class="fragment">double angle = calibrationData.getS1AngleOffset();
+
+// Rotationmatrix
+data.x_disp = (std::cos(angle) * data.x_disp) + (-std::sin(angle) * data.y_disp);
+data.y_disp = (std::sin(angle) * data.x_disp) + (std::cos(angle) * data.y_disp);
+</pre><div class="image">
+<img src="../../forward_with_calibration.png" alt="forward_with_calibration.png"/>
+<div class="caption">
+Geradeausfahrt nach Kalibrierung</div></div>
+ <h1><a class="anchor" id="localization"></a>
+Berechnung der Position und Ausrichtung des Roboters</h1>
+<p>Zum Bestimmen der Position und der Ausrichtung des Roboters wird nur 1 Sensor benötigt. Die Berechnung der Roboterposition sowie Ausrichtung wird in diesem Abschnitt beschrieben.</p>
+<p>Ist der Sensor in einer rechtwinkligen Position zur Tangente des Kreises montiert, den der Sensor um die Achse des Roboters bildet, vereinfacht sich die Berechnung sehr. In diesem Abschnitt wird die Lösung bei einer variablen Montierung beschrieben, da dies allgemeiner ist. Obwohl am Roboter 2 Sensoren montiert sind, wird nur einer zur Berechnung der Position verwendet.</p>
+<h2><a class="anchor" id="ausgang"></a>
+Ausgangssituation</h2>
+<p>Mit der Annahme, dass der Sensor kalibriert wurde kann von folgender Situation ausgegangen werden.</p>
+<div class="image">
+<img src="../../mm_robot.png" alt="mm_robot.png"/>
+<div class="caption">
+Ausganssituation</div></div>
+<p> Bei einer Geradeausfahrt ändert sich nur die Y-Koordinate.</p>
+<p>Zusätzlich sind folgende Parameter des Roboters bekannt: </p>
+<pre class="fragment">double axisLength; // cm
+
+double distanceToSensor_x; // cm
+double distanceToSensor_y; // cm
+
+double distanceToSensor_radius; // cm
+double distanceToWheel; // cm
+double sensorAngle; // Radiants
+double m;
+</pre><h2><a class="anchor" id="ber"></a>
+Berechnung</h2>
+<p>Da die Sensoren nicht im rechten Winkel mit der Kreistangente montiert sind, ändern sich bei einer Drehung des Roboters X- sowie Y-Koordinaten des Sensors. Bei einer Geradeausfahrt ändern sich nur die Y-Koordinaten. Werden die empfangenen Sensordaten direkt dargestellt, ergibt sich aufgrund der rotierten Montierung des Sensors eine Gerade mit fester Steigung:</p>
+<div class="image">
+<img src="../../mm_rotation_edit2.png" alt="mm_rotation_edit2.png"/>
+<div class="caption">
+Rohe und Verarbeitete Daten bei 90° links Drehung</div></div>
+<p> Um anhand der Sensor-Displacement Daten die Position des Roboters zu bestimmen muss aus diesen Daten die jeweilige zurückgelegte Distanz bei einer Drehung sowie bei einer Geradeausfahrt bestimmt werden. Die Werte müssen in Drehung und Geradeausfahrt unterteilt werden.</p>
+<div class="image">
+<img src="../../mm_rotation_forward_edit.png" alt="mm_rotation_forward_edit.png"/>
+<div class="caption">
+Rotationswinkel + Geradeausfahrt</div></div>
+<p> Dafür wird das Verhältnis der Änderung der X-und Y-Koordinaten bei einer Drehung aus den empfangenen Sensorwerten herausgerechnet werden. Das Verhältnis von X- und Y-Werten bei einer Drehung ist bekannt. Es entspricht genau dem im folgenden Bild dargestellten Winkel.</p>
+<div class="image">
+<img src="../../mm_angle.png" alt="mm_angle.png"/>
+<div class="caption">
+Winkel für Verhältnis von X- und Y- Änderung</div></div>
+<p> Da die Maße des Roboters bekannt sind kann dieser Winkel sowie die Steigung bestimmt werden:</p>
+<pre class="fragment">sensorAngle = (M_PI/2.0) - atan(distanceToSensor_y/distanceToSensor_x);
+m = tan(sensorAngle);
+</pre><p>Dabei muss lediglich der Winkel der Y-Achse des Sensors gegenüber dem Radius bestimmt werden. Mit diesem Wissen kann der Y-Anteil bei einer Drehung bestimmt werden. Mithilfe des Satz des Pythagoras wird die zurückgelegte Distanz bei Drehung, sowie Geradeausfahrt berechnet. Da die zurückgelegte Distanz bei einer Drehung bekannt ist, kann mithilfe der Kreisbogenformel der Drehwinkel bestimmt werden. Die gesamte zurückgelegte Distanz minus die Kurvendistanz ergibt die zurückgelegte Strecke bei Geradeausfahrt (bzw. Rückwärtsfahrt).</p>
+<div class="image">
+<img src="../../mm_rotation_edit.png" alt="mm_rotation_edit.png"/>
+<div class="caption">
+Rotationswinkel</div></div>
+ <h2><a class="anchor" id="impl"></a>
+Implementierung</h2>
+<p>Die Berechnung wird bisher zu Debuggingzwecken auf einem PC ausgeführt. Die wichtigsten Klassen befinden sich in der Datei Robot.h. Roboter und Sensoren werden als Objekte der Superklasse Object erzeugt, welche als Hauptfunktion die Methoden forward() sowie rotate() zum Bewegen der Objekte bietet.</p>
+<p>Robot:</p>
+<ul>
+<li>X Position im globalen Koordinatensystem</li>
+<li>Y Position im globalen Koordinatensystem</li>
+<li>Ausrichtung im globalen Koordinatensystem</li>
+</ul>
+<p>Sensor:</p>
+<ul>
+<li>X im Roboter Koordinatensystem</li>
+<li>Y im Roboter Koordinatensystem</li>
+<li>Ausrichtung im Roboter Koordinatensystem</li>
+</ul>
+<p>Zusätzlich wird bei allen Objekten der zurückgelegte Pfad im globalen Koordinatensystem abgespeichert.</p>
+<div class="image">
+<img src="../../mm_inheritance.png" alt="mm_inheritance.png"/>
+<div class="caption">
+Vererbungshierachie</div></div>
+<p> Die Methode move() des Roboters wird verwendet um den Roboter aufgrund der X- und Y-Displacement Werte eines Sensors zu bewegen. Dabei werden die oben erklärten Berechnungen ausgeführt, welche als Ergebnis den Drehwinkel sowie die zurückgelegte Distanz bei Geradeausfahrt liefern. Je nach Richtung werden die forward() und rotate() Methoden ausgeführt.</p>
+<p>Der folgende Code-Ausschnitt zeigt die Implementierung der move() Funktion.</p>
+<pre class="fragment">// V_r = Vector for rotation
+// V_f = Vector for forward/backward
+// V_rd = Vector for rotation and forward/backward
+
+double Vx_r = dX;
+double Vy_r = dX * attributes.m;
+
+double Vdist_r = sqrt(pow(Vx_r, 2) + pow(Vy_r, 2));
+
+double Vm_r = Vy_r/Vx_r;
+double Vangle_r = atan(Vm_r);
+
+// From circular arc (Vdist_r)
+double rotateAngle = Vdist_r / attributes.distanceToSensor_radius;
+
+// Rotation direction
+if (dX &gt;= 0)
+        rotate(rotateAngle);
+else
+        rotate(rotateAngle * -1);
+
+double Vdist_rf = sqrt(pow(dX, 2) + pow(dY, 2));
+double Vdist_f = Vdist_rf - Vdist_r;
+
+// Forward or backward
+if (dY &lt; 0)
+        Vdist_f *= -1;
+
+forward(Vdist_f);
+</pre><h1><a class="anchor" id="problems"></a>
+Probleme</h1>
+<p>Während der Durchführung des Projektes traten einige Probleme bezüglich der PLN2033 Sensoren auf. Diese werden in diesem Abschnitt erläutert.</p>
+<h2><a class="anchor" id="p1"></a>
+Schwierige Fehlersuche</h2>
+<p>Aufgrund der schlechten Testumgebung und schlechtem Hardware-Aufbau war die Fehlersuche sowie Validierung der Sensor-Funktionalität sehr schwierig. Der PLN2033 ist ein hoch-präziser Lasersensor. Um korrekte Aussagen über seine Funktionsweise zu machen, ist ein professioneller Prüfstand erforderlich welcher in diesem Projekt nicht vorhanden war. Die Tests mussten per Hand (Lego-Wagen per Hand schieben, drehen ...) durchgeführt werden, was genaues Messen unmöglich machte. Eine exakte Geradeausfahrt, Drehung, ... konnte damit nicht erreicht werden.</p>
+<h2><a class="anchor" id="p2"></a>
+Lego</h2>
+<p>Zum Testen sowie bei der Endmontierung auf dem Roboter wird Lego benutzt, was wiederum einige Probleme mit sich führt</p>
+<ul>
+<li>Wackelnde Montage: Bei Bewegung des Roboters wackeln die Sensoren. Trotz Kalibrierung kann dadurch keine exakte Messung gemacht werden, da die Lage der Sensoren sich bei einer Fahrt immer ändert.</li>
+<li>Die Sensoren sind sehr empfindlich. Mit Lego können diese nicht in einer exakten Höhe montiert werden (was das Lift-Bit auslöst, dazu später mehr).</li>
+<li>Eine gerade Montierung der Sensoren ist nicht möglich.</li>
+<li>Damit die Sensoren immer einen gleichen Abstand zum Boden haben setzen die Sensoren auf dem Boden auf, dadurch können sich diese verkanten und die Messungen werden ungenau.</li>
+</ul>
+<div class="image">
+<img src="../../sensor_construction.jpg" alt="sensor_construction.jpg"/>
+<div class="caption">
+Sensorbefestigung</div></div>
+<p> Das folgende Bild zeigt eine Geradeausfahrt des Roboters. Trotz Kalibrierung erkennt die Software eine Kurve.</p>
+<h2><a class="anchor" id="p3"></a>
+Lift-Bit Problem</h2>
+<p>Zum Testen der Grundfunktionalität der Sensoren wurde folgender Test auf dem Beagle Bone ausgeführt:</p>
+<p><b>Teststart</b></p>
+<p>Reset der internen Register.</p>
+<p><b>Testdurchführung</b></p>
+<p>Der Roboter wird eine festgelegte Strecke (10cm) per Hand vorwärts bewegt. Dabei zählen die internen X- und Y-Register hoch. Es wurde mit einer festgelegten Auflösung sichergestellt, dass kein Überlauf bei der 10cm Strecke auftreten kann.</p>
+<p><b>Testende</b></p>
+<p>Die Register Werte des Sensors werden ausgelesen. Nun sollten die Y-Werte (geradeaus) immer 10cm betragen.</p>
+<p><b>Beobachtung</b></p>
+<p>Bei mehreren Test wurde festgestellt das bei einigen Testfahrten die Y-Werte sehr kleine Werte annehmen. Dies passierte ungefähr in 10%-20% der Fälle.</p>
+<p>Nach langem Debuggen wurde erkannt, dass die Sensoren sehr empfindlich auf anheben reagieren. Da bei Bewegungen von Hand die Sensoren sehr wackeln, wurde beim Anhalten des Roboters (nach 10cm) in einigen Fällen das Lift-Bit des Sensors gesetzt. Dieses Lift-Bit wird gesetzt, wenn der Sensor zu weit von seiner kalibrierten Höhe angehoben wird. Passiert dies, werden alle internen Zähler zurückgesetzt und die Werte sind verloren.</p>
+<p>Eine Lösung für dieses Problem ist es, die Sensorwerte mit einer sehr hohen Abtastrate (1kHz) abzufragen, um den Fehler sehr gering zu halten. Zusätzlich können bei Aktivierung des Lift-Bits interpolierte Werte als Ersatz in die Messdaten integriert werden.</p>
+<h2><a class="anchor" id="p4"></a>
+Median Filter Problem und WLAN Latenz</h2>
+<p>Ursprünglich wurden die Messdaten mit einer sehr geringen Frequenz abgefragt. Dadurch entstand der oben genannte Fehler. Um diese kleinen Messwerte herauszufiltern wurde ein Median-Filter auf der PC-Seite eingesetzt. Allerdings verschlechtert dieser die Messergebnisse. Da die Kommunikation über WLAN erfolgt entstehen Latenzen bei der Übertragung der Messdaten. Bei der Abfrage der Messdaten wird erst auf eine Antwort der aktuellen Anfrage an das BBB gewartet. Erst wenn diese eingetroffen ist wird nach dem nächsten Paket gefragt. Die übertragenen Daten bleiben zwar korrekt, allerdings kann die Übertragung von Paketen länger dauern. Dadurch hat der Sensor mehr Zeit Messdaten zu sammeln. Langsamere Pakete enthalten dadurch höhere Displacement-Werte. Da der Median diese als Ausreißer weg-filtert obwohl diese korrekt sind, verschlechtert dieser die Messergebnisse.</p>
+<p>Durch das Speichern der Messwerte mit einer hohen sample-rate auf dem BBB entsteht dieser Fehler nicht mehr.</p>
+<h2><a class="anchor" id="p5"></a>
+SPI Device Tree</h2>
+<p>Das Konfigurieren des Device Trees für SPI1 mit 2 Chip-Selects unter Ubuntu brachte einige Probleme mit sich. Das Device Tree File musste mit den richtigen Pins erweitert werden. Zusätzlich musste HDMI deaktiviert werden.</p>
+<h1><a class="anchor" id="fazit"></a>
+Fazit und Erkenntnisse</h1>
+<p>Mit einer hohen sample rate ist der Lift-Bit Fehler sehr gering. Mit einem geeignetem Filter könnte der Fehler noch weiter verringert werden. Bei 1kHz kann dieser vernachlässigt werden. Zusätzlich könnten anstatt dem Aufsummieren der Daten auf dem BBB diese auch als Schritte abgespeichert werden. Allerdings reichen die Abfrage-Intervalle der GUI vollkommen aus um schnelle Kurven zu erkennen. Auch die WLAN Latenzen stören das Messergebnis nicht. Der Sensor hat eine Varianz von 1-2cm auf 100cm. Unabhängig davon driften die gemessenen Werte ab ca. 1m etwas ab. Dies passiert aufgrund der Lego-Montierung welche sich immer wieder verschiebt. Trotz kalibrieren sind die Messwerte nicht optimal. Nur ein Sensor wird zum Bestimmen der Position und Ausrichtung benötigt.</p>
+<h1><a class="anchor" id="improvement"></a>
+Verbesserungen</h1>
+<ul>
+<li>Filter beim Lift-Bit einführen (interpolieren)</li>
+<li>Mehr Teile vom PC zum BBB verlagern</li>
+<li>Auf BBB: Einzelne Schritte der Messwerte abspeichern anstatt diese aufzusummieren</li>
+<li>Bessere Hardware zum Montieren verwenden<ul>
+<li>Die nicht wackelt</li>
+<li>Gleicher Abstand der Sensoren zum Boden ohne schleifen</li>
+</ul>
+</li>
+<li>ROS Topics anstatt Services verwenden (optional)</li>
+</ul>
+<div class="image">
+<img src="../../sensor_test_car.jpg" alt="sensor_test_car.jpg"/>
+<div class="caption">
+Testfahrzeug mit 2 PLN2033</div></div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: Graphen Ansatz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d4/ddd/graphen.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Graphen Ansatz </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#beschreibung-graphen">Beschreibung</a></li>
+<li class="level1"><a href="#umsetzung-graphen">Umsetzung</a><ul><li class="level2"><a href="#navigation-graphen">Navigation</a></li>
+<li class="level2"><a href="#algorithmus-graphen">Algorithmus</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#probleme-graphen">Probleme</a></li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="beschreibung-graphen"></a>
+Beschreibung</h1>
+<p>Da der <a class="el" href="../../da/d5d/histogramm.html">Histogramm Ansatz</a> ohne gute Odometrie nicht gut umsetzbar ist wurde ein zweiter Ansatz gestartet. Das Labyrinth wurde in quadratische Zellen eingeteilt. Die Seitenlänge einer Zelle enspricht dabei der Länge einer Holzwand aus dem Labyrinth. Der Roboter bewegt sich dann stets <b>von Zelle zu Zelle</b>. Wenn der Roboter etwa in der Mitte einer Zelle angekommen ist prüft er zunächst in welchen Richtungen sich Wände befinden und in welche Richtungen er weiterfahren kann. Dies wird in einer <b>Karte</b> dokumentiert und anschließend wird durch einen Algorithmus bestimmt welche benachbarte Zelle der Roboter als nächstes ansteuert.</p>
+<h1><a class="anchor" id="umsetzung-graphen"></a>
+Umsetzung</h1>
+<p>Die Soucedateien sind im package <b>minotaur_maze</b> zu finden.</p>
+<h2><a class="anchor" id="navigation-graphen"></a>
+Navigation</h2>
+<p>Bei einer Fahrt von Zelle zu Zelle kann der Roboter aufgrund von Ungenauigkeiten der Motoren sowie Durchdrehen eines Rades eine schlechte Ausrichtung und somit fehlerhaftes Verhalten entwickeln. Da keine Maussensoren zum erkennen dieser Fehler zur Verfügung stehen, müssen wir dies anhand der Messwerte der <b>Ultraschallsensoren</b> ausgleichen. Hierbei werden die Werte der Sensoren rechts und links verglichen und es wird eine Korrektur in die Wege geleitet, die versucht den Abstand beider Sensoren zur Wand gleich zu halten. Je höher dabei der Unterschied der Sensorwerte, desto höher das Entgegenlenken durch die <b>Korrektur</b>. Wenn ein Sensor keine nützlichen Messwerte liefern kann, da sich an seiner Seite keine Wand sondern eine Abzweigung befindet, werden nur die Daten des anderen Sensors mit einem <b>Sollabstand</b> verglichen.</p>
+<p>Um einzelne Ausreisser in den Messwerten auszugleichen wurde ein <b>Medianfilter</b> angewendet der die letzten 5 bis 10 Werte eines Sensors nutzt.</p>
+<p>Beim Fahren bestimmt der Roboter anhand des zurückgelegten Weges, wann er in der nächsten Zelle angekommen ist. Daraufhin wird ermittelt welche Aktion als nächstes ausgeführt wird (Mehr dazu siehe <a class="el" href="../../d4/ddd/graphen.html#algorithmus-graphen">Algorithmus</a>). Der Roboter hat hier immer genau zwei Möglichkeiten:</p>
+<ul>
+<li>Rotation: Der Roboter dreht sich auf der Stelle in eine angegebene Richtung um 90° oder 180°.</li>
+<li>Fahrt geradeaus: Der Roboter bewegt sich zur nächsten Zelle.</li>
+</ul>
+<h2><a class="anchor" id="algorithmus-graphen"></a>
+Algorithmus</h2>
+<p>Es handelt sich hierbei um einen sehr simplen Algorithmus. Nachdem erkannt wurde in welche Richtung ein Weiterfahren möglich ist, wird der Roboter, falls mehrere Möglichkeiten zur Verfügung stehen, unbesuchte Zellen als Ziel bevorzugen. Wenn mehrere unbesuchte Zellen zur Verfügung stehen wird momentan bevorzugt geradeaus gefahren, da bei Drehungen ab und an Fehler auftreten können. Daher wird versucht, so wenige Rotoationen wie möglich zu machen. Mehr dazu siehe: <a class="el" href="../../d4/ddd/graphen.html#probleme-graphen">Probleme</a>.</p>
+<h1><a class="anchor" id="probleme-graphen"></a>
+Probleme</h1>
+<p>Auch in diesem Ansatz entstehen viele Probleme und Fehler aufgrund von <b>ungenauen Sensorwerten</b> und <b>schlechter Odometrie</b>.</p>
+<p>Besonders anfällig für Fehler sind die Rotationen. Es kann passieren, dass der Roboter vor der Rotation nicht gerade steht oder bei der Rotation ein Rad durchdreht. Als Resultat dreht sich der Roboter zu weit oder zu wenig und fährt im schlechtesten Fall anschließend gegen eine Wand, da er nicht schnell genug gegenlenken kann. Diese Probleme könnten eventuell beide durch funktionsfähige Maussensoren abgefangen und korrigiert werden, die uns jedoch nicht zur Verfügung stehen.</p>
+<p>Aber auch beim einfachen geradeausfahren können Fehler auftreten. So kann es vorkommen, dass der Roboter einem von ihm erkannten Fehler gegensteuern will, dies jedoch viel zu stark macht und er kann sich nicht mehr gerade in der Mitte halten und fährt entweder gegen eine Wand oder steht vor der nächsten Rotation enorm schief. Dieses Problem tritt zumeist aufgrund von unerklärlich schlechten Sensormesswerten auf. Wir haben versucht dieses Problem mittels eines Medianfilters zu beheben, jedoch ohne großen Erfolg.</p>
+<p>Das Problem des Medianfilters besteht darin, dass die Ultraschallsensoren stets mehrere fehlerhafte Werte in Folge liefern und der Filter dadurch nutzlos wird. Mehr dazu siehe: ultraschallsensoren-roboter.</p>
+<p>Ein weiteres Problem besteht im Aufbau des Labyrinths. Zwischen zwei Holzplatten entsteht stets eine kleine Rille, da die Platten nicht exakt gleich groß sind. An dieser Rille kann der Roboter, vor allem beim Rotieren, hängen bleiben. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../db/d93/roboter.html">Roboter</a></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

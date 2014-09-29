@@ -1,0 +1,26 @@
+var classnxt_1_1_brick =
+[
+    [ "Brick", "d0/d4f/classnxt_1_1_brick.html#a3d4665097d624e4b2945e0e8299828b2", null ],
+    [ "~Brick", "d0/d4f/classnxt_1_1_brick.html#a2afc1f894a2bfb697d9c59ae82d3b010", null ],
+    [ "connect", "d0/d4f/classnxt_1_1_brick.html#a3d934884edb8a468aa1c390fc6b49a62", null ],
+    [ "disconnect", "d0/d4f/classnxt_1_1_brick.html#abda257e03779bfc3c7b9eca2de6bf850", null ],
+    [ "getBatteryLevel", "d0/d4f/classnxt_1_1_brick.html#a690f2b4f80cf179cbd5f7524b84f581a", null ],
+    [ "getCurrentProgramName", "d0/d4f/classnxt_1_1_brick.html#ac05619fb5617880b68d6a68b44474ec7", null ],
+    [ "getInputValues", "d0/d4f/classnxt_1_1_brick.html#adb621e158d8d3927951369b663220ed1", null ],
+    [ "getOutputState", "d0/d4f/classnxt_1_1_brick.html#a6b5b9814f449e19a2d0813f13fbbd9e0", null ],
+    [ "keepAlive", "d0/d4f/classnxt_1_1_brick.html#aa633e756d1b19ac29c245ca2bc409791", null ],
+    [ "lsGetStatus", "d0/d4f/classnxt_1_1_brick.html#a6ad97a8834022b52c47c5aa1f3d8d844", null ],
+    [ "lsRead", "d0/d4f/classnxt_1_1_brick.html#ae3a1182c3ba72ef169ee7212eb5a8fb3", null ],
+    [ "lsWrite", "d0/d4f/classnxt_1_1_brick.html#a721e81a7ee996c7ab40ea9b0b078a47b", null ],
+    [ "playSoundFile", "d0/d4f/classnxt_1_1_brick.html#a36656113703ecd7ffd7c70dd9cf2f031", null ],
+    [ "playTone", "d0/d4f/classnxt_1_1_brick.html#ae04934d0f8aa0a05ab69620a9d7f194e", null ],
+    [ "readMessage", "d0/d4f/classnxt_1_1_brick.html#a3432eeead87e93d20b3cd61cfeb238d1", null ],
+    [ "resetInputScaledValue", "d0/d4f/classnxt_1_1_brick.html#afe630627892364790a4e255454120810", null ],
+    [ "resetMotorPosition", "d0/d4f/classnxt_1_1_brick.html#ad7c6f6291f4e949dcc145bef8d1998a8", null ],
+    [ "setInputMode", "d0/d4f/classnxt_1_1_brick.html#add187e81d67aae79f25d28115633e0bb", null ],
+    [ "setOutputState", "d0/d4f/classnxt_1_1_brick.html#a1a7e33da3c89085767b95e2801195e62", null ],
+    [ "startProgram", "d0/d4f/classnxt_1_1_brick.html#ab2e50ccf9a6adcc055ebc55c57e94ba1", null ],
+    [ "stopProgram", "d0/d4f/classnxt_1_1_brick.html#a74255977f3e283c07f0e3a1d46a9d518", null ],
+    [ "stopSoundPlayback", "d0/d4f/classnxt_1_1_brick.html#a9332b69588d0bb201acd0015c84eef77", null ],
+    [ "writeMessage", "d0/d4f/classnxt_1_1_brick.html#aab0a195df287f7166cb92b6a4a1b37f1", null ]
+];

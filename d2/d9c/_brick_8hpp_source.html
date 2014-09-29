@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: /home/fabian/develop/nxt_minotaur/src/robot_control/lib/NXTControl/include/nxt/Brick.hpp Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d2/d9c/_brick_8hpp_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Brick.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NXT_BRICK_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NXT_BRICK_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;nxt/USBSocket.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;nxt/TelegramFactory.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;nxt/TelegramDecoder.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>nxt</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="../../d0/d4f/classnxt_1_1_brick.html">   18</a></span>&#160;        <span class="keyword">class </span><a class="code" href="../../d0/d4f/classnxt_1_1_brick.html" title="Used for communication with a NXT brick.">Brick</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <a class="code" href="../../d6/d37/classnxt_1_1_u_s_b_socket.html" title="Used to communicate with the LEGO NXT Brick via USB.">USBSocket</a> socket;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                pthread_mutex_t receiveMutex;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                pthread_mutex_t sendMutex;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <a class="code" href="../../db/d8c/classnxt_1_1_telegram_factory.html" title="Provides methods to create Telegram objects.">TelegramFactory</a> telegramFactory;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <a class="code" href="../../db/d45/classnxt_1_1_telegram_decoder.html" title="Provides functionality to create handy data structures from Telegram objects.">TelegramDecoder</a> telegramDecoder;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordtype">bool</span> connected;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordtype">void</span> send(<span class="keyword">const</span> <a class="code" href="../../d6/d20/classnxt_1_1_telegram.html" title="This class represents a message to communicate with the brick.">Telegram</a> &amp;p_telegram);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <a class="code" href="../../d6/d20/classnxt_1_1_telegram.html" title="This class represents a message to communicate with the brick.">Telegram</a> sendAndReceive(<span class="keyword">const</span> <a class="code" href="../../d6/d20/classnxt_1_1_telegram.html" title="This class represents a message to communicate with the brick.">Telegram</a> &amp;p_telegram);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html" title="Used for communication with a NXT brick.">Brick</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                ~<a class="code" href="../../d0/d4f/classnxt_1_1_brick.html" title="Used for communication with a NXT brick.">Brick</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordtype">void</span> connect(<span class="keyword">const</span> <span class="keywordtype">int</span> p_interface = 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordtype">void</span> disconnect();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#ab2e50ccf9a6adcc055ebc55c57e94ba1" title="Starts a program on the brick with the given name.">startProgram</a>(<span class="keyword">const</span> std::string &amp;p_fileName);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a74255977f3e283c07f0e3a1d46a9d518" title="Stops the currently running program on the brick.">stopProgram</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a36656113703ecd7ffd7c70dd9cf2f031" title="Plays a sound on the brick with the given name.">playSoundFile</a>(<span class="keyword">const</span> uint8_t p_loop,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                                   <span class="keyword">const</span> std::string &amp;p_fileName);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#ae04934d0f8aa0a05ab69620a9d7f194e" title="Plays a tone on the brick.">playTone</a>(<span class="keyword">const</span> uint16_t p_frequency,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                          <span class="keyword">const</span> uint16_t p_durationMS);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                          </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a1a7e33da3c89085767b95e2801195e62" title="Allows to control the motor with the given port.">setOutputState</a>(<span class="keyword">const</span> uint8_t p_port,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                                    <span class="keyword">const</span> uint8_t p_power,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                    <span class="keyword">const</span> uint8_t p_motorMode,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                                    <span class="keyword">const</span> uint8_t p_regulationMode,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                                    <span class="keyword">const</span> uint8_t p_turnRatio,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                                    <span class="keyword">const</span> uint8_t p_runState,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                    <span class="keyword">const</span> uint32_t p_tachoLimit);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                        </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#add187e81d67aae79f25d28115633e0bb" title="Sets type and mode of a sensor with the given port.">setInputMode</a>(<span class="keyword">const</span> uint8_t p_port,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                  <span class="keyword">const</span> uint8_t p_type,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                  <span class="keyword">const</span> uint8_t p_mode);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#afe630627892364790a4e255454120810" title="Resets the scaled output value of a sensor with the given port.">resetInputScaledValue</a>(<span class="keyword">const</span> uint8_t p_port);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#aab0a195df287f7166cb92b6a4a1b37f1" title="Sends a string message to the given mailbox of the brick.">writeMessage</a>(<span class="keyword">const</span> uint8_t p_mailbox,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                                  <span class="keyword">const</span> std::string&amp; p_message);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                                  </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#ad7c6f6291f4e949dcc145bef8d1998a8" title="Resets the motor data e.g.">resetMotorPosition</a>(<span class="keyword">const</span> uint8_t p_port,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                                                <span class="keyword">const</span> uint8_t p_relative);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                                                </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a9332b69588d0bb201acd0015c84eef77" title="Stops the currently running sound.">stopSoundPlayback</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordtype">void</span> lsWrite(<span class="keyword">const</span> uint8_t p_port,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                         <span class="keyword">const</span> uint8_t p_txDataLength,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                         <span class="keyword">const</span> uint8_t p_rxDataLength,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *p_txData);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <a class="code" href="../../d8/d4f/classnxt_1_1_output_state.html" title="Data structure for the current state of a motor.">OutputState</a> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a6b5b9814f449e19a2d0813f13fbbd9e0" title="Reads the current state of the given motor.">getOutputState</a>(<span class="keyword">const</span> uint8_t p_port);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <a class="code" href="../../d1/dbb/classnxt_1_1_input_values.html" title="Data structure for the current sensor state.">InputValues</a> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#adb621e158d8d3927951369b663220ed1" title="Reads the current measured values of the given sensor.">getInputValues</a>(<span class="keyword">const</span> uint8_t p_port);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <a class="code" href="../../d9/dbb/classnxt_1_1_battery_level.html" title="Data structure for GetBatteryLevel responses.">BatteryLevel</a> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a690f2b4f80cf179cbd5f7524b84f581a" title="Reads the current battery level of the brick.">getBatteryLevel</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <a class="code" href="../../d5/d16/classnxt_1_1_keep_alive.html" title="Data structure for keep alive responses.">KeepAlive</a> keepAlive();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <a class="code" href="../../d4/d40/classnxt_1_1_l_s_status.html" title="Data structure for LSGetStatus responses.">LSStatus</a> lsGetStatus(<span class="keyword">const</span> uint8_t p_port);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <a class="code" href="../../dc/d0f/classnxt_1_1_l_s_read.html" title="Data structure for LSRead responses.">LSRead</a> lsRead(<span class="keyword">const</span> uint8_t p_port);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <a class="code" href="../../d3/d8b/classnxt_1_1_program_name.html" title="Data structure for GetCurrentProgramName responses.">ProgramName</a> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#ac05619fb5617880b68d6a68b44474ec7" title="Reads the program name of the currently running program.">getCurrentProgramName</a>();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="../../d2/de1/classnxt_1_1_mailbox_message.html" title="Data structure for ReadMailbox responses.">MailboxMessage</a> <a class="code" href="../../d0/d4f/classnxt_1_1_brick.html#a3432eeead87e93d20b3cd61cfeb238d1" title="Reads the first message in the message queue of the given mailbox.">readMessage</a>(<span class="keyword">const</span> uint8_t p_remoteMailbox,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                                                   <span class="keyword">const</span> uint8_t p_localMailbox,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                                                   <span class="keyword">const</span> uint8_t p_removeMessage);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        };</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3cb0bc422fda54cff9ce3fcea62c5f8a.html">src</a></li><li class="navelem"><a class="el" href="../../dir_b97a5f0bdf888e49386a1a757c2f4280.html">robot_control</a></li><li class="navelem"><a class="el" href="../../dir_20a9d38a831f5c41c73af7732798e4d2.html">lib</a></li><li class="navelem"><a class="el" href="../../dir_d843018a810d462c18ffd5170228ee1a.html">NXTControl</a></li><li class="navelem"><a class="el" href="../../dir_374a6391b00fe67044c1566b24087a55.html">include</a></li><li class="navelem"><a class="el" href="../../dir_8cf207eb823be6029104ad07c2a76bbc.html">nxt</a></li><li class="navelem"><b>Brick.hpp</b></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

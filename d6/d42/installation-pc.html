@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: Installation PC</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d6/d42/installation-pc.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Installation PC </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#beschreibung-installation-pc">Beschreibung</a></li>
+<li class="level1"><a href="#installation-installation-pc">Installation</a><ul><li class="level2"><a href="#Programme">Grundlegende Programme</a></li>
+<li class="level2"><a href="#gcc-installation-pc">GCC 4.8</a></li>
+<li class="level2"><a href="#cross-gcc-installation-pc">GCC-ARM 4.8</a></li>
+<li class="level2"><a href="#ros-installation-pc">ROS</a></li>
+<li class="level2"><a href="#qt4-installation-pc">QT4</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#konfiguration-installation-pc">Konfiguration</a><ul><li class="level2"><a href="#lego-installation-pc">Lego NXT</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#kompilierung-installation-pc">Kompilierung</a></li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="beschreibung-installation-pc"></a>
+Beschreibung</h1>
+<p>Auf dem Entwicklungsrechner wird ebenso wie auf dem Beagle Bone Black <b>Ubuntu in der Version 12.04</b> verwendet. Vorzugsweise sollte die 32bit Version benutzt werden, da ansonsten die benötigten 64bit Bibliotheken nachinstalliert werden müssen. Die Installation des Betriebssystem wird hier nicht weiter erklärt, da sich genügend Anleitungen und Tools für diesen Zweck im Internet finden. <hr/>
+<h1><a class="anchor" id="installation-installation-pc"></a>
+Installation</h1>
+<h2><a class="anchor" id="Programme"></a>
+Grundlegende Programme</h2>
+<p>Die folgenden Programme müssen installiert werden.</p>
+<pre class="fragment">sudo apt-get install libusb-1.0-0-dev
+</pre><h2><a class="anchor" id="gcc-installation-pc"></a>
+GCC 4.8</h2>
+<p>Der GCC 4.8 implementiert mehr Features des <b>C++11 Standards</b> als der standardmäßige 4.6 Compiler unter Ubuntu 12.04. Um diesen zu installieren und als Standardcompiler festzulegen, müssen die folgenden Kommandos ausgeführt werden.</p>
+<pre class="fragment">sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-4.8 g++-4.8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+</pre><h2><a class="anchor" id="cross-gcc-installation-pc"></a>
+GCC-ARM 4.8</h2>
+<p>Zum cross-compilieren der pln_minotaur Bibliothek welche zum Ansteuern der Maussensoren verwendet wird wird eine Cross-Compile Toolchain verwedet. Dabei wird eine bereits kompilierte Toolchain für Linux von Linaro verwendet.</p>
+<h2><a class="anchor" id="ros-installation-pc"></a>
+ROS</h2>
+<p>Die verwendete ROS Version ist <b>hydro</b>. Um ROS hydro auf dem Computer zu installieren, müssen folgende Befehle ausgeführt werden.</p>
+<pre class="fragment">sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" &gt; /etc/apt/sources.list.d/ros-latest.list'
+wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install ros-hydro-desktop-full
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/hydro/setup.bash" &gt;&gt; ~/.bashrc
+source ~/.bashrc
+sudo apt-get install ros-hydro-joy
+</pre><h2><a class="anchor" id="qt4-installation-pc"></a>
+QT4</h2>
+<p>Für die grafischen Programme des Projekts werden <b>QT4 und QWT</b> verwendet. Diese werden aus den Paketquellen installiert.</p>
+<pre class="fragment">sudo apt-get install ros-hydro-qt* libqwt-dev
+</pre> <hr/>
+<h1><a class="anchor" id="konfiguration-installation-pc"></a>
+Konfiguration</h1>
+<h2><a class="anchor" id="lego-installation-pc"></a>
+Lego NXT</h2>
+<p>Damit der <b>Lego NXT Brick als USB-Gerät erkannt wird</b> und somit auch die Kommunikation zwischen Brick und PC stattfinden kann, muss eine neue Benutzergruppe erzeugt werden. Die Benutzer, die den Brick nutzen möchten müssen Teil dieser Gruppe sein. Dieser Schritt ist nicht zwingend notwendig. Er wird nur benötigt, wenn der Brick zu Testzwecken direkt vom Computer aus angesteuert werden soll.</p>
+<pre class="fragment">sudo su
+groupadd lego
+usermod -a -G lego &lt;username&gt;
+touch /etc/udev/rules.d/70-lego.rules
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0694", GROUP="lego", MODE="0660"' &gt; /etc/udev/rules.d/70-lego.rules
+</pre><p><b></b> &lt;username&gt; muss dabei durch den Benutzer ersetzt werden, der Teil Gruppe werden soll. Um die Einstellungen zu übernehmen, muss der Computer neugestartet werden. <hr/>
+<h1><a class="anchor" id="kompilierung-installation-pc"></a>
+Kompilierung</h1>
+<p>In dem Repository des Projekts existiert die Datei <b>compile</b>. Diese beinhaltet <b>verschiedene Kommandos um das Projekt zu kompilieren</b>. Um das Projekt auf dem PC zu kompileren, muss <b>in das Repositoryverzeichnis gewechselt</b> und folgendes Kommando ausgeführt werden:</p>
+<pre class="fragment">./compile pc
+</pre><p>Um einen kompletten Rebuild durchzuführen muss <b>vor dem oben genannten Befehl</b>, folgender Befehl ausgeführt werden:</p>
+<pre class="fragment">./compile clean
+</pre> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../d5/dfc/installation.html">Installation</a></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

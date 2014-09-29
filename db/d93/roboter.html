@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: Roboter</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('db/d93/roboter.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Roboter </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#beschreibung-roboter">Beschreibung</a></li>
+<li class="level1"><a href="#struktur-roboter">Struktur</a><ul><li class="level2"><a href="#packages-roboter">Packages</a></li>
+<li class="level2"><a href="#kommunikation-roboter">Kommunikation</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#implementierung-roboter">Implementierung</a><ul><li class="level2"><a href="#nxt-control-roboter">NXTControl</a></li>
+<li class="level2"><a href="#robot-control-roboter">RobotControl</a></li>
+<li class="level2"><a href="#gui-tools-projekt">GUI Tools</a></li>
+<li class="level2"><a href="#ansaetze-roboter">Ansätze</a></li>
+<li class="level2"><a href="#maussensoren-roboter">Maussensoren</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#probleme-roboter">Bleibende Probleme</a><ul><li class="level2"><a href="#ultraschallsensoren-projekt">Ultraschallsensoren</a></li>
+<li class="level2"><a href="#navigation-projekt">Navigation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="beschreibung-roboter"></a>
+Beschreibung</h1>
+<p>Die Aufgabe des Roboters ist es <b>ein Labyrinth zu karthographieren</b>. Der Roboter verfügt über einen <b>Differentialantrieb</b> und kann seine Umgebung mithilfe von <b>Ultraschallsensoren</b> wahrnehmen. Sensoren und Antrieb werden über einen <b>Lego NXT Brick</b> angesteuert.</p>
+<p>Zusätzlich wurde auf dem Roboter ein <b>Beagle Bone Black</b> montiert. Dieses bietet <b>mehr Rechenleistung und eine flexiblere Programmierung</b> als der Brick, auf welchem lediglich in der beschränkten Programmiersprache NXC gearbeitet werden kann. Außerdem wird das BBB benötigt um zusätzliche die <b>Maussensoren</b> über den SPI-Bus anzusprechen. Diese Maussensoren werden verwendet, um die zurückgelegte Strecke des Roboters zu messen und somit dessen <b>Odometrie zu verbessern</b>.</p>
+<p>Als Programmiersprache wird in dem kompletten Projekt <b>C++</b> verwendet. Außerdem wird das Framework <b>Robot Operative System (ROS)</b> in der Version <b>hydro</b> verwendet. Mit diesem Framework wird die Kommunikationen einzelner Komponenten und Programme in einem verteilten System stark abstrahiert und dadurch vereinfacht. Außerdem bietet es viele Funktionen und Programme zur Navigation und Lokalisierung von Robotern. Die Hauptaufgabe von ROS in diesem Projekt ist die <b>Interprozesskommunikation</b> über das WLAN (siehe <a class="el" href="../../db/d93/roboter.html#kommunikation-roboter">Kommunikation</a>). In einem der Ansätze wird außerdem auch der ROS Navigation Stack verwendet, um den Roboter zu navigieren (siehe <a class="el" href="../../da/d5d/histogramm.html">Histogramm Ansatz</a>).</p>
+<p>In diesem Teil des Wikis wird der Roboter des Projekts und dessen Implementierung näher beleuchtet. Da die Maussensoren nicht in den Roboter implementiert wurden, sollte zu diesem Thema die Seite <a class="el" href="../../da/df2/maussensoren.html">Maussensoren</a> herangezogen werden.</p>
+<div class="image">
+<img src="../../labyrinth_1.jpg" alt="labyrinth_1.jpg"/>
+<div class="caption">
+Labyrinth mit Roboter</div></div>
+<hr/>
+<h1><a class="anchor" id="struktur-roboter"></a>
+Struktur</h1>
+<p>Das Projekt ist in verschiedene <b>ROS-Packages</b> unterteilt, sodass zu jeder Zeit immer nur <b>die wirklich benötigten Packages kompiliert werden können</b>. Dies ist vor allem in Hinblick auf die lange Kompilierdauer auf dem Beagle Bone nützlich. Die einzelnen ROS-Packages werden im folgenden Abschnitt <a class="el" href="../../db/d93/roboter.html#packages-roboter">Packages</a> kurz beschrieben. Für weitere Informationen können die <b>Code Dokumentation</b> und die genannten Abschnitte und Wikiseiten herangezogen werden.</p>
+<p>In diesen ROS-Packages sind verschiedene ROS-Nodes enthalten, die alle miteinander über das <b>ROS-Kommunikationsystem</b> kommunizieren. Die Art und Richtung der Kommunikation wird in dem Abschnitt <a class="el" href="../../db/d93/roboter.html#kommunikation-roboter">Kommunikation</a> erläutert.</p>
+<h2><a class="anchor" id="packages-roboter"></a>
+Packages</h2>
+<table class="doxtable">
+<tr>
+<th align="left">Packagename </th><th align="left">Beschreibung</th></tr>
+<tr>
+<td align="left"><b>minotaur_common</b> </td><td align="left">Dieses Package beinhaltet <b>grundlegende Strukturen und Funktionen</b>, die <b>von allen anderen Packages verwendet</b> werden. Darunter sind verschiedene Funktionen zur Umrechnung von Maßeinheiten, Funtkionen für das Auslesen vonn Parametern vom ROS-Param-Server, Funktionen zur Kommunikation über ROS und Definitionen für ROS-Topics. Durch dieses Package wird vor allem <b>Codeduplikationen</b> vorgebeugt. Das Package muss <b>immer</b> im Zusammenhang mit jedem anderen Package kompiliert werden. </td></tr>
+<tr>
+<td align="left"><b>minotaur_common_qt</b> </td><td align="left">Auch bei diesem Package handelt es sich um ein allgemeines Package, das praktische Funktionen und Strukturen anbietet. Dabei ist dieses Package speziell <b>für Aufgaben im Zusammenhang mit QT</b> zuständig. Da solche Funktionen beispielsweise <b>auf dem Beagle Bone nicht benötigt</b> werden, haben diese eine seperates Package erhalten. Die meisten QT nutzenden Packages verwenden auch dieses Package. </td></tr>
+<tr>
+<td align="left"><b>robot_control</b> </td><td align="left">Dieses Package umfasst die Implementierung des <b>PID-Reglers</b> für die Motoren, das Auslesen der Ultraschallsensoren und das Verarbeiten von ROS-Messages, um den Brick anzusteuern. Außerdem wird hier die <b>ROS-Node RobotControl</b> bereitgestellt, welche die Kommunikationsgrundlage aller anderen Packages darstellt. Mehr dazu in dem Abschnitt robot-control-projekt. </td></tr>
+<tr>
+<td align="left"><b>pid_monitor</b> </td><td align="left">In diesem Package wird eine <b>GUI-Applikation</b> realisiert, mit der sich das Verhalten des PID-Reglers in Form von Graphen betrachten lässt. Der Roboter kann außerdem ferngesteuert werden. So können dessen Einschwing- und Ausgleichverhalten beobachtet werden. Neben den Motoren bietet die Applikation auch die Möglichkeit Hindernisse mit den Ultraschallsensoren wahrzunehmen. Mehr dazu im Abschnitt <a class="el" href="../../db/d93/roboter.html#gui-tools-projekt">GUI Tools</a>. </td></tr>
+<tr>
+<td align="left"><b>minotaur_map</b> </td><td align="left">Das Package <b>minotaur_map</b> realisiert den <b>ersten Ansatz</b> dieses Projektes. Es beinhaltet Funktionen und Strukturen um <b>Histogrammkarten</b> zu erzeugen und durch diese hindurch zu navigieren. Außerdem nutzt es die <b>ROS Navigation Stack Schnittstelle</b>, um den Roboter anzusteuern. Mehr Informationen dazu finden sich im Abschnitt ansätze-projekt. </td></tr>
+<tr>
+<td align="left"><b>map_monitor</b> </td><td align="left">Bei <b>map_monitor</b> handelt es sich um ein Package, das eine <b>GUI-Applikation</b> für die Histogrammkarte realisiert. Der Roboter kann angesteuert werden während <b>eine Karte live mitgezeichnet</b> wird. Mit diesem Tool kann also die Qualität der Karte und auch das Verhalten des Erstellungsalgorithmus beobachtet und bewertet werden. Mehr Informationen finden sich im Abschnitt <a class="el" href="../../db/d93/roboter.html#gui-tools-projekt">GUI Tools</a>. </td></tr>
+<tr>
+<td align="left"><b>minotaur_maze</b> </td><td align="left">In dem Package <b>minotaur_maze</b> wird der <b>zweite Ansatz</b> dieses Projektes realisiert. Es enthält Strukturen und Funktionen, um den Roboter in einem <b>graphenähnlichen Labyrinth</b> zu bewegen und eine Karte dieses Graphen zu erstellen. Mehr dazu im Abschnitt ansätze-projekt. </td></tr>
+<tr>
+<td align="left"><b>mouse_monitor_pc</b> </td><td align="left">Mouse Monitor PC wird auf einem Desktop-Rechner ausgeführt und empfängt über WLAN die PLN2033 Sensor-Daten vom BBB. Messwerte und Sensor-Konfiguration werde graphisch dargestellt sowie Funktionen zum Debuggen sind verfügbar. Basierend auf den Messwerten wird die Position/Ausrichtung sowie der zurückgelegte Pfad des Roboters berechnet und dargestellt. Zusätzlich können die Sensoren mithilfe graphischen Oberfläche kalibriert werden. </td></tr>
+<tr>
+<td align="left"><b>mouse_monitor_beagle</b> </td><td align="left">Dieses Package beinhaltet das BBB Gegenstück zu Mouse Monitor PC. Es ist zuständig für das Ansteuern des PLN2033 Sensors. Dafür wird die pln_minotaur Bibliothek verwendet. Zusätzlich bietet das Package verschiedene ROS Services zur Kommunikation über WLAN an. </td></tr>
+<tr>
+<td align="left"><b>minotaur_teleop</b> </td><td align="left">Das Package <b>minotaur_teleop</b> enthält ROS-Nodes, um den Roboter remote mit einem Gamepad zu steuern. Dies kann beispielsweise benutzt werden, um den Roboter in Kombination mit dem GUI-Tool <a class="el" href="../../d3/ddc/gui-tools.html#map_monitor-gui-tools">map_monitor</a>. </td></tr>
+</table>
+<h2><a class="anchor" id="kommunikation-roboter"></a>
+Kommunikation</h2>
+<p>Das folgende Diagramm zeigt die Kommunikationsstruktur in diesem Projekt.</p>
+<div class="image">
+<img src="../../minotaur-dataflow.png" alt="minotaur-dataflow.png"/>
+</div>
+<p>Die zentrale ROS-Node <b>RobotControl</b> wird in dem Abschnitt <a class="el" href="../../db/d93/roboter.html#robot-control-roboter">RobotControl</a> genauer betrachtet. Mit ihr kann der Roboter über das ROS Kommunikationssystem angesteuert werden.__Movebase__ ist eine ROS interne Node. Sie ist zuständig für die grundlegende Kommunikation innerhalb des ROS Navigation Stack. Daher wird sie auch nur von Applikationen benötigt, die den ROS Navigation Stack benutzen, ansonsten muss diese Node nicht gestartet werden. <b>moveInMaze</b> ist die ROS-Node, die den <a class="el" href="../../d4/ddd/graphen.html">Graphen Ansatz</a> realisiert. Um diese Node zu benutzen muss <b>RobotControl</b> gestartet sein.</p>
+<p>Auf dem Desktop Computer laufen sämtliche GUI Aplikationen. Diese kommunizieren über das ROS Kommunikationssystem mit der <b>RobotControl</b> Node. Außerdem läuft dort auch die remote-control Node <b>joy_teleop</b>. Mit dieser kann der Roboter mithilfe eines Gamepads ferngeseteuert werden. Die Verbindung zwischen BBB und PC findet per WLAN statt.</p>
+<p>Das Beagle Bone kommuniziert neben dem PC auch mit lokal vorhandenen Geräten. Der <b>Lego NXT Brick</b> ist über USB an das BBB angeschlossen. An den Brick sind wiederum die Motoren und Ultraschallsensoren des Roboters angeschlossen. Somit kann das Beagle Bone nur indirekt über den Brick auf die <b>Aktoren und Sensoren</b> des Roboters zugreifen. Neben dem Brick nutzt das BBB einen SPI-Bus, um die angeschlossenen <b>Maussensoren</b> anzusteuern. Diese wurden im Rahmen diese Projektes jedoch noch nicht implementiert, da sich die Maussensoren noch in einem <b>Prototypenstatus</b> befinden. <hr/>
+<h1><a class="anchor" id="implementierung-roboter"></a>
+Implementierung</h1>
+<p>Das Projekt umfasst viele einzelne <b>ROS-Nodes</b> (Applikationen). Dabei handelt es sich um <b>ineinandergreifende Anwendungen</b>, die über das ROS-Kommunikationssystem zusammenarbeiten. Einige davon dienen ausschließlich <b>Debuggingzwecken</b> und sind zumeist graphischer Natur. Ihre <b>Funktionsweise</b> und das korrekte <b>Starten dieser Anwendungen</b> (beispielsweise zur remote Steuerung des Roboters) wird in den folgenden Abschnitten näher beleuchtet.</p>
+<h2><a class="anchor" id="nxt-control-roboter"></a>
+NXTControl</h2>
+<p><b>NXTControl</b> ist eine Bibliothek um den Lego NXT Brick über USB anzusteuern. Da diese Bibliothek eine Eigenentwicklung ist wird sie auf der folgenden Seite detaillierter beschrieben.</p>
+<ul>
+<li><a class="el" href="../../d3/db0/nxt-control.html">NXTControl</a></li>
+</ul>
+<h2><a class="anchor" id="robot-control-roboter"></a>
+RobotControl</h2>
+<p><b>RobotControl</b> ist die zentrale ROS-Node des Projektes. Sie wird in dem Package <b>robot_control</b> realisiert.</p>
+<p>Die Node übernimmt das <b>Umrechnen von Geschwindigkeit und Winkelgeschwindigkeit</b> auf Geschwindigkeiten der einzelnen Motoren. Außerdem regelt sie über einen <b>PID-Regler</b> die Geschwindigkeiten der Motoren getrennt. Zur Regelung werden außerdem <b>die Geschwindigkeiten der Motoren ausgelesen</b> und wiederrum in Geschwindigkeit und Winkelgeschwindigkeit umgerechnet. Die angeschlossenen <b>Ultraschallsensoren</b> werden in regelmäßigen Intervallen ausgelesen.</p>
+<p>Weiterhin nimmt RobotControl <b>ROS-Messages</b> entgegen, mit denen die Geschwindigkeiten des Roboters gesetzt werden können. Die von den Motoren <b>gemessenen Geschwindigkeiten</b> werden wiederum <b>in regelmäßigen Abständen an eine ROS-Topic gesendet</b>. Dabei werden für diese Nachrichten die <b>Standard-ROS-Topics für den ROS Navigation Stack</b> verwendet, sodass der Roboter <b>vollständig kompatibel zu dem ROS Navigation Stack</b> ist. Dies bedeutet, dass Odometriedaten an die Topic <b>/odom</b> geschickt und Geschwindigkeitsbefehle von der Topic <b>/cmd_vel</b> entegegen genommen werden.</p>
+<p>Die Ultraschallsensoren können über <b>eigene Topics und Messages</b> angesteuert werden. So kann mit einer Message an die Topic <b>/add_ultrasonic</b> der Node mitgeteilt werden, dass sich an dem angegebenen Port ein Ultraschallsensor befindet und dieser nun auch ausgelesen werden soll. Dabei verwendet RobotControl ein <b>internes Mapping von Sensor-IDs auf Sensorports</b>, sodass bei den Sensormessungen immer klar ist welche Messung von welchem Sensor kommt. Die ID wird beim Hinzufügen des Sensors über eine ROS-Message zurückgegeben. Mehr Topics und deren Funktion können der Datei <a class="el" href="../../db/d28/_minotaur_topics_8hpp_source.html">MinotaurTopics.hpp</a> und der <b>Code Dokumentation</b> entnommen werden.</p>
+<p>Eine weitere komfortable Funktion von RobotControl ist, dass <b>sämtliche Einstellungen</b> des PID-Reglers, Dimensionen des Roboters und angeschlossene Sensoren über <b>den ROS-Param-Server geladen werden können</b>. Diese Daten können alternativ auch über ROS-Messages eingestellt werden. Dabei werden die Einstellungen auf dem ROS-Param-Server unter dem Namespace <b>minotaur</b> hinterlegt. Danach folgt der <b>Name der Einstellungen</b> und darunter die einzelnen Parameter. Die ganze Struktur kann aus der Datei models.yaml in dem Package <b>minotaur_common</b> entnommen werden. Beim Start der RobotControl Node schaut diese nach dem Parameter <b>CurrentModel</b>. Ist dieser vorhanden wird dessen Inhalt als Name der initialen Einstellungen behandelt und die Node lädt diese Einstellungen.</p>
+<p>Damit übernimmt diese ROS-Node die <b>komplette Ansteuerung des Brick</b> und abstrahiert diese auf ROS-Messages. Somit muss lediglich diese Node auf dem Beagle Bone Black ausgeführt werden. Alle anderen Nodes können ebenfalls auf dem BBB oder aber auch auf einem anderen Computer im selben Netzwerk ausgeführt werden.</p>
+<h2><a class="anchor" id="gui-tools-projekt"></a>
+GUI Tools</h2>
+<p>Während dieses Projektes wurde es notwendig <b>grafische Anwendungen</b> zu entwickeln, um bestimmte <b>Systemteile zu debuggen</b> und deren Verhalten zu beobachten. Alle Anwendungen wurden mit QT4 und der Erweiterung QWT geschrieben. QWT bietet grafische Komponenten wie Graphen, wodurch das Analysieren von Daten vereinfacht wird. Alle in diesem Projekt entwickelten grafischen Anwendungen werden auf der folgenden Seite näher beschrieben:</p>
+<ul>
+<li><a class="el" href="../../d3/ddc/gui-tools.html">GUI Tools</a></li>
+</ul>
+<h2><a class="anchor" id="ansaetze-roboter"></a>
+Ansätze</h2>
+<p>Im Rahmen dieses Projektes wurden mehrere Lösungsansätze zum Lösen des Labyrinths verfolgt.</p>
+<ol type="1">
+<li><a class="el" href="../../da/d5d/histogramm.html">Histogramm Ansatz</a></li>
+<li><a class="el" href="../../d4/ddd/graphen.html">Graphen Ansatz</a></li>
+</ol>
+<p>Im <b>ersten Ansatz</b> wurde eine <b>Histogrammkarte</b> angefertigt und der Roboter sollte sich anhand dieser Karte und mithilfe des ROS Navigation Stacks durch das Labyrinth bewegen.</p>
+<p>Im <b>zweiten Ansatz</b> wurde der Roboter direkt angesteuert. Das Labyrinth wurde als <b>Graph</b> betracht und in Zellen gleicher Größe unterteilt.</p>
+<h2><a class="anchor" id="maussensoren-roboter"></a>
+Maussensoren</h2>
+<p>Da die Odometrie der Lego NXT Motoren nicht sehr gut ist und vor allem bei Drehungen des Roboter oft Fehler verursachen, <b>da die Reifen durchdrehen</b>, sollten <b>Maussensoren</b> genutzt werden, um die Odometrie zu verbessern. Wie bereits erwähnt wurden die Maussensoren aufgrund ihres Prototypenstatus nicht in den Roboter implementiert. Mehr Informationen dazu finden sich auf der Seite <a class="el" href="../../da/df2/maussensoren.html">Maussensoren</a>. <hr/>
+<h1><a class="anchor" id="probleme-roboter"></a>
+Bleibende Probleme</h1>
+<p>Im Verlauf des Projektes sind <b>mehrere Probleme</b> aufgetreten, deren Lösung bis zum derzeiten Zeitpunkt noch ausstehen.</p>
+<h2><a class="anchor" id="ultraschallsensoren-projekt"></a>
+Ultraschallsensoren</h2>
+<p>Die Ultraschallsensoren des NXT registrieren <b>in scheinbar zufälligen Abständen Fehlmessungen</b>, die jenseits einer Fehlertoleranz liegen. Dabei handelt es sich um Fehlmessungen im Bereich von <b>+-20cm</b>. Diese könnten theoretisch <b>durch einen Medianfilter ausgeglichen werden</b>, was in diesem Projekt auch versucht wurde. Tritt jedoch so eine Fehlmessung auf, liefert der Sensor für <b>die nächsten 4 bis 8 Messungen</b> denselben falschen Wert. Dadurch kann auch der Medianfilter diesen Fehler nicht mehr ausgleichen.</p>
+<p>Es liegt der Verdacht nahe, dass der Sensor die folgenden Male den <b>gleichen Sensorwert</b> liefert, weil er keine weitere Messung unternommen hat. Jedoch wird bei der Messung <b>kein Zeitstempel</b> hinterlegt, wodurch sich nicht unterscheiden lässt, ob es sich um die gleiche Messung oder nur zufällig um den gleichen Wert bei einer weiteren Messung handelt.</p>
+<p>Ein <b>Vergrößern des Medianfilters</b> oder eine <b>Verlängern des Abtastintervalls</b> führt zu einer <b>Reduktion der Wirkung des Fehlers</b>. Der größere Medianfilter filtert den Fehler entweder ganz weg oder der Fehler tritt nur einen kurzen Moment auf. Jedoch ist die <b>Reaktionszeit des Roboter</b> durch den großen Filter <b>extremst verlängert und zumeist unzureichend</b>. Der Roboter kann dann nicht auf Umgebungsänderungen wie das Auftauchen einer Wand reagieren. <b>Dasselbe gilt auch für ein verlängertes Abtastintervall</b>. Es führt zu weniger Messungen mit derselben Fehlmessung. Damit wird auch bestätigt, dass immer wieder derselbe Messwert aus der gleichen Messungen geliefert wird. Die Reaktionszeit des Roboters sinkt jedoch auch in diesem Fall in einen unzureichenden Bereich.</p>
+<p>Die <b>Ansteuerung der Ultraschallsensoren geschieht durch das Direct Command Interface des Brick</b>, wodurch kein dediziertes Programm auf dem Brick laufen muss. Durch <b>die Abstraktion des Bricks</b> in Hinsicht auf das Auslesen des Sensors, ist es auch <b>nicht möglich direkt auf die Hardware des Sensors zuzugreifen</b>. Daher konnte der Sensor auch nicht direkt, sondern nur über das Direct Command Interface ausgelesen werden.</p>
+<p>Aufgrund des großen Messfehlers und der wiederauftretenden Messwerte ist <b>eine Navigation in einem Labyrinth für den Roboter kaum möglich</b>.</p>
+<h2><a class="anchor" id="navigation-projekt"></a>
+Navigation</h2>
+<p>Dadruch, dass sämtliche Fehler bei der Arbeit mit den Maussensoren erst <b>gegen Ende des Projekts</b> gelöst wurden, konnten diese nicht mehr an den Roboter montiert und die entsprechende Software implementiert werden. Daher bleibt weiterhin das Problem bestehen, dass die Navigation und Lokalisierung des Roboters unzureichend ist. Die Auswirkung der Maussensoren auf die Odometrie des Roboters konnte im Rahmen dieses Projekts nicht mehr festgestellt werden. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

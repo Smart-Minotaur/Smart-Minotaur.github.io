@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: GUI Tools</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d3/ddc/gui-tools.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GUI Tools </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#pid_monitor-gui-tools">pid_monitor</a><ul><li class="level2"><a href="#beschreibung-pid-gui-tools">Beschreibung</a></li>
+<li class="level2"><a href="#bedienung-pid-gui-tools">Bedienung</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#map_monitor-gui-tools">map_monitor</a><ul><li class="level2"><a href="#beschreibung-map-gui-tools">Beschreibung</a></li>
+<li class="level2"><a href="#bedienung-map-gui-tools">Bedienung</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="pid_monitor-gui-tools"></a>
+pid_monitor</h1>
+<p>Im folgenden soll die Anwendung <b>pid_monitor</b> näher beschrieben werden. Dabei wird auf ihren Nutzen und die Bedienung eingegangen.</p>
+<h2><a class="anchor" id="beschreibung-pid-gui-tools"></a>
+Beschreibung</h2>
+<p>Die Anwendung <b>pid_monitor</b>, das sich im gleichnamigen Package befindet, realisiert eine grafische Anwendung um den <b>PID-Regler der RobotControl Node</b> zu beobachten. Außerdem werden Hindernisse, die von den Ultraschallsensoren registriert werden, dargestellt. Die aktuellen Proportional-, Integral- und Differentialanteile des Roboters lassen sich genauso wie die Geschwindigkeit und Winkelgeschwindigkeit durch Schieberegler einstellen.</p>
+<p>An den integrierten Graphen kann das <b>Einschwingverhalten des PID-Regler</b> beobachtet werden. Weiterhin können durch das <a href="http://de.wikipedia.org/wiki/Faustformelverfahren_%28Automatisierungstechnik%29#Methode_von_Ziegler_und_Nichols">Ziegler–Nichols Verfahren</a> die optimalen PID-Parameter ermittelt werden.</p>
+<h2><a class="anchor" id="bedienung-pid-gui-tools"></a>
+Bedienung</h2>
+<p>Um <b>pid_monitor</b> zu starten werden ein Beagle Bone Black und ein Computer benötigt. Beide müssen sich im gleichen Netzwerk befinden. Nun muss in das Wurzelverzeichnis des Repositorys gewechselt werden. Dort muss nun die Datei <b>start</b> mit einem beliebigen Editor geöffnet und die IP Variablen sowohl auf dem BBB als auch auf dem PC <b>mit den entsprechenden IPs</b> belegt werden. Zuerst muss die Anwendung auf dem PC mit folgendem Befehl gestartet werden:</p>
+<pre class="fragment">./start pm_p
+</pre><p>Auf dem BBB nun folgenden Befehl ausführen:</p>
+<pre class="fragment">./start rc_b
+</pre><p>Die Bedienung des Programms soll anhand des folgenden Screenshots erläutert werden.</p>
+<div class="image">
+<img src="../../pid-monitor.png" alt="pid-monitor.png"/>
+</div>
+<p>Mit den Schiebereglern im rot umrahmten Bereich können die <b>Parameter für den PID-Regler</b> eingestellt werden. <b>Kp</b> repräsentiert hierbei den Proportional-, <b>Ki</b> den Integral- und <b>Kp</b> den Differentialanteil.</p>
+<p>In dem hellblauen Bereich befinden sich die Schieberegler um die Geschwindigkeit und die Winkelgeschwindigkeit einzustellen. Mit <b>v</b> kann die Geschwindigkeit und mit <b>w</b> die Winkelgeschwindigkeit geregelt werden. Der Button <b>brake</b> stoppt die Motoren des Roboters.</p>
+<p>Der gelbe Bereich kennzeichnet die Geschwindigkeitsanzeigen. Auch gilt für <b>v</b> und <b>w</b> das gleich wie im roten Bereich. Unter der Überschrift <b>Target Velocity</b> befinden sich die eingestellten Sollgeschwindigkeiten. Bei <b>Measured Velocity</b> befinden sich die tatsächlich gemessenen Geschwindigkeiten, die über das ROS-Kommunikationssystem empfangen werden.</p>
+<p>Im grünen Bereich befinden sich nun die Graphen, die die Geschwindigkeit und Winkelgeschwindigkeit über die Zeit auftragen. Die <b>Y-Achse</b> stellt die gemessene Geschwindigkeit in m/s dar (bei Winkelgeschwindigkeit Rad/s). Die X-Achse zeigt die Nummer der Messung an. 3 bedeutet hierbei die 3. Messung. Die Zeit zwischen zwei Messungen ist dabei vom eingestellten Abtastintervall abhängig.</p>
+<p>Der dunkelblaue Bereich zeigt die Ultraschallsensormessungen. Der <b>blaue Punkt</b> stellt den Roboter dar und die <b>roten Punkte</b> zeigen Hindernisse, die von den Sensoren registriert werden.</p>
+<h1><a class="anchor" id="map_monitor-gui-tools"></a>
+map_monitor</h1>
+<h2><a class="anchor" id="beschreibung-map-gui-tools"></a>
+Beschreibung</h2>
+<p>Die Anwendung <b>map_monitor</b> dient der Beobachtung der Odometrie des Roboters und der Aufzeichnung der Umgebungskarte. Mithilfe der Odometrie und Sensordaten des Roboters werden seine Bewegungsroute und Hindernisse in der Umgebung in eine grafische Oberfläche eingezeichnet. Mithilfe dieser Anwendung konnte festgestellt werden, wie schlecht die Odometrie des Roboters tatsächlich ist.</p>
+<h2><a class="anchor" id="bedienung-map-gui-tools"></a>
+Bedienung</h2>
+<p>Um <b>map_monitor</b> zu starten werden ein Beagle Bone Black und ein Computer benötigt. Beide müssen sich im gleichen Netzwerk befinden. Nun muss in das Wurzelverzeichnis des Repositorys gewechselt werden. Dort muss nun die Datei <b>start</b> mit einem beliebigen Editor geöffnet und die IP Variablen sowohl auf dem BBB als auch auf dem PC <b>mit den entsprechenden IPs</b> belegt werden. Zuerst muss die Anwendung auf dem PC mit folgendem Befehl gestartet werden:</p>
+<pre class="fragment">./start map_p
+</pre><p>Auf dem BBB nun folgenden Befehl ausführen:</p>
+<pre class="fragment">./start rc_b
+</pre><p>Die Bedienung des Programms soll anhand des folgenden Screenshots erläutert werden.</p>
+<div class="image">
+<img src="../../map-monitor.png" alt="map-monitor.png"/>
+</div>
+<p>Die Anwendung zeigt im Hauptfenster die aufgezeichnete Karte. Die roten Bereiche stellen hierbei die Hindernisse in der Umgebung dar. Schwarze Quadrate sind ehemalige Positionen des Roboters. Das blaue Quadrat ist die aktuelle Position des Roboters. Außerdem wird im Kopfbereich der Anwendung die aktuelle Position des Roboters in Zahlen dargestellt.</p>
+<p>Um den Roboter zusätzlich bewegen zu können, kann die Applikation <b>pid_monitor</b> verwendet werden. Dazu muss auf dem PC folgender Befehl ausgeführt werden.</p>
+<pre class="fragment">./start pm_p
+</pre><p>Mehr Informationen zu <b>pid_monitor</b> finden sich im Abschnitt <a class="el" href="../../d3/ddc/gui-tools.html#pid_monitor-gui-tools">pid_monitor</a>. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../db/d93/roboter.html">Roboter</a></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>

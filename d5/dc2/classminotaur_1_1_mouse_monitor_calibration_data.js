@@ -1,0 +1,26 @@
+var classminotaur_1_1_mouse_monitor_calibration_data =
+[
+    [ "MouseMonitorCalibrationData", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a9e52ca3f0134686df6e0ab855ef2b2da", null ],
+    [ "~MouseMonitorCalibrationData", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#ae30d9dd1e3e2d741f35dc62cf61566ce", null ],
+    [ "addData", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#ad46fc1a883e96ee4b6c48d09a536973a", null ],
+    [ "calibrate", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a1d356be997091ef908ecb27f99b76293", null ],
+    [ "getS1AngleOffset", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a85f8621541b81698abc19f8d5e4e8ff6", null ],
+    [ "getS1RealDistance", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#adca5c0dade5fe452a02cc833ed96da59", null ],
+    [ "getS1XDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a96cd92b5578cefcfa9040b9a0b54ebce", null ],
+    [ "getS1YDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a22bb74d7de1b8f2331842c60061fcc0a", null ],
+    [ "getS2AngleOffset", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a6a49b3bf207aef5f09beb1db41977db3", null ],
+    [ "getS2RealDistance", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#ad2aaa6b4c877cac3e290754b97a55c2b", null ],
+    [ "getS2XDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a49fe4a59de15281583ec1ff02621e825", null ],
+    [ "getS2YDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#afda6d684887d36b5f81906e6a879697f", null ],
+    [ "isCalibrating", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#ade80ce8fb90e2fc257eb94222e43e078", null ],
+    [ "setS1AngleOffset", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a8d2c008e13a9f678c3224db7e54893d8", null ],
+    [ "setS1RealDistance", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a5c6fdb3745dd4d10e6e4c2ec4f62c8ce", null ],
+    [ "setS1XDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#aed77b63c6d3d751bc30e45323ef15a39", null ],
+    [ "setS1YDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a290d89d17f237c0c5a91db270d9128e7", null ],
+    [ "setS2AngleOffset", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a9880a3ca97fc90ecb3e4d3130d1d7269", null ],
+    [ "setS2RealDistance", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a039df7d747347fcf4eb9d66311ec8406", null ],
+    [ "setS2XDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a740186d3cadf88ea495e111ec3108580", null ],
+    [ "setS2YDisplacement", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#aea2fdd66b2e66c85269b8f70498ed764", null ],
+    [ "startCalibrating", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#ac761d986fe2fb71bcd6a42404d2b9487", null ],
+    [ "stopCalibrating", "d5/dc2/classminotaur_1_1_mouse_monitor_calibration_data.html#a258c4f03c022c4895b16343e2342c656", null ]
+];

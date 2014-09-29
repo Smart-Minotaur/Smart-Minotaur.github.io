@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Smart Minotaur: Installation Beagle Bone Black</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo_small.jpg"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Smart Minotaur
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="../../annotated.html"><span>Klassen</span></a></li>
+      <li><a href="../../files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d9/dcf/installation-bbb.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Seiten</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Installation Beagle Bone Black </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#beschreibung-installation-bbb">Beschreibung</a></li>
+<li class="level1"><a href="#installation-installation-bbb">Installation</a><ul><li class="level2"><a href="#ubuntu-installation-bbb">Ubuntu 12.04</a></li>
+<li class="level2"><a href="#programme-installation-bbb">Grundlegende Programme</a></li>
+<li class="level2"><a href="#ros-installation-bbb">ROS</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#konfiguration-installation-bbb">Konfiguration</a><ul><li class="level2"><a href="#lego-installation-bbb">Lego NXT</a></li>
+<li class="level2"><a href="#wlan-installation-bbb">WLAN</a></li>
+<li class="level2"><a href="#spi-installation-bbb">SPI Device Tree</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#kompilierung-installation-bbb">Kompilierung</a></li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="beschreibung-installation-bbb"></a>
+Beschreibung</h1>
+<p>Auf dem Beagle Bone Black (BBB) wird ein Ubuntu in der Version 12.04 für ARM-Prozessoren aufgesetzt. ROS wird in der der Version <b>hydro</b> verwendet. Weiterhin wird zur Kommunikation über den USB-Bus die Bibliothek <b>libusb 1.0</b> benötigt. <hr/>
+<h1><a class="anchor" id="installation-installation-bbb"></a>
+Installation</h1>
+<h2><a class="anchor" id="ubuntu-installation-bbb"></a>
+Ubuntu 12.04</h2>
+<p>Um Ubuntu 12.04 auf dem BBB zu installieren, muss das Image auf die Micro-SD Karte entpackt werden.</p>
+<p>Die Micro-SD Karte muss mit dem PC verbunden werden. Danach müssen die nachfolgenden Kommandos ausgeführt werden. Für __/dev/sdX__ im letzten Schritt muss das entsprechende Gerät für die Micro-SD Karte eingesetzt werden.</p>
+<pre class="fragment">wget -O ubuntu-precise-12.04.3-armhf-3.8.13-bone30.img.xz http://s3.armhf.com/debian/precise/bone/ubuntu-precise-12.04.3-armhf-3.8.13-bone30.img.xz
+sudo su
+xz -cd ubuntu-precise-12.04.3-armhf-3.8.13-bone30.img.xz &gt; /dev/sdX
+</pre><p>Standard Benutzer und Passwort lauten wie folgt:</p>
+<ul>
+<li>Benutzer: <b>ubuntu</b></li>
+<li>Passwort: <b>ubuntu</b></li>
+</ul>
+<h2><a class="anchor" id="programme-installation-bbb"></a>
+Grundlegende Programme</h2>
+<p>Die folgenden Programme müssen auf dem BBB installiert sein, um das Projekt zu kompilieren.</p>
+<pre class="fragment">sudo apt-get install git subversion build-essential libusb-1.0-0-dev vim ntp
+</pre><h2><a class="anchor" id="ros-installation-bbb"></a>
+ROS</h2>
+<p>Um ROS auf dem BBB zu installieren, müssen die folgenden Kommandos ausgeführt werden.</p>
+<pre class="fragment">sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
+sudo sh -c 'echo "deb http://packages.namniart.com/repos/ros precise main" &gt; /etc/apt/sources.list.d/ros-latest.list'
+wget http://packages.namniart.com/repos/namniart.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install ros-hydro-ros-base
+sudo apt-get install python-rosdep
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/hydro/setup.bash" &gt;&gt; ~/.bashrc
+source ~/.bashrc
+sudo apt-get install ros-hydro-move-base
+</pre> <hr/>
+<h1><a class="anchor" id="konfiguration-installation-bbb"></a>
+Konfiguration</h1>
+<h2><a class="anchor" id="lego-installation-bbb"></a>
+Lego NXT</h2>
+<p>Damit der Lego NXT Brick als USB-Gerät erkannt wird und somit auch die Kommunikation zwischen Brick und BBB stattfinden kann, muss eine neue Benutzergruppe erzeugt werden. Die Benutzer, die den Brick nutzen möchten müssen Teil dieser Gruppe sein.</p>
+<pre class="fragment">sudo su
+groupadd lego
+usermod -a -G lego ubuntu
+touch /etc/udev/rules.d/70-lego.rules
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0694", GROUP="lego", MODE="0660"' &gt; /etc/udev/rules.d/70-lego.rules
+</pre><p><b></b> &lt;username&gt; muss dabei durch den Benutzer ersetzt werden, der Teil Gruppe werden soll. Nun muss das BBB neugestartet werden.</p>
+<h2><a class="anchor" id="wlan-installation-bbb"></a>
+WLAN</h2>
+<p>Folgendes muss in die Datei <code>/etc/network/interfaces</code> eingefügt und angepasst werden. Wenn dort bereits ein Adapter namens wlan0 existiert, sollte dieser überschrieben werden.</p>
+<pre class="fragment">auto wlan0
+iface wlan0 inet static
+wpa-ssid "yourSSID"
+wpa-psk "yourWPA-PSK-Key"
+address 192.168.11.143
+netmask 255.255.255.0
+gateway 192.168.11.1
+</pre><h2><a class="anchor" id="spi-installation-bbb"></a>
+SPI Device Tree</h2>
+<p>Um den SPI-Bus auf dem BBB zu verwenden, müssen die jeweiligen SPI-Ports über den Device-Tree aktiviert werden. In diesem Abschnitt wird die Installation von SPI0 und SPI1 auf dem Beagle Bone Black erläutert.</p>
+<p>Das Script addOverlayToDeviceTree installiert die overlay Dateien für '''SPI0 (1 chip select)''' und '''SPI1 (2 chips selects)'''.</p>
+<blockquote class="doxtable">
+<p><b>Nur für angstrom linux</b> &gt; Achtung! Für das neuste angstrom image ist kein opkg dtc Paket verfügbar. Eine einfach Lösung dafür ist das kompilierte dtbo Dateui auf einem Ubuntu Desktop PC zu erzwugen und dann aufs BBB zu kpoeren.</p>
+<p></p>
+</blockquote>
+<ul>
+<li>Klonen des bbb_setup repository</li>
+<li>Installation von dtc (device tree compiler)</li>
+</ul>
+<pre class="fragment">sudo ./dtc.sh
+</pre><ul>
+<li>Das addOverlayToDeviceTree Skript kompiliert und installiert das SPI0 und SPI1 Overlay File.</li>
+</ul>
+<pre class="fragment">sudo ./addOverlayToDeviceTree
+</pre><ul>
+<li>Aktivieren von SPI1 beim Start (HDMI wird deaktiviert, da HDMI auch Pins die von SPI1 verwendet werden benutzt und das zu fehlerhafter Kommunikation führt)</li>
+<li>Boot Partition mounten.</li>
+</ul>
+<pre class="fragment">mkdir /mnt/boot
+mount /dev/mmcblk0p1 /mnt/boot
+</pre><ul>
+<li>Textdatei uEnv.txt auf der Boot Partition bearbeiten und folgendes einfügen.</li>
+</ul>
+<pre class="fragment">optargs=quiet drm.debug=7 capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN capemgr.enable_partno=MINOTAUR-SPI1
+</pre><ul>
+<li>Das Beagle Bone Black neustarten.</li>
+</ul>
+<pre class="fragment">sudo reboot
+</pre> <hr/>
+<h1><a class="anchor" id="kompilierung-installation-bbb"></a>
+Kompilierung</h1>
+<p>In dem Repository des Projekts existiert die Datei <b>compile</b>. Diese beinhaltet <b>verschiedene Kommandos um das Projekt zu kompilieren</b>. Um das Projekt auf dem Beagle Bone Black zu kompileren, muss <b>in das Repositoryverzeichnis gewechselt</b> und folgendes Kommando ausgeführt werden:</p>
+<pre class="fragment">./compile beagle
+</pre><p>Um einen kompletten Rebuild durchzuführen muss <b>vor dem oben genannten Befehl</b>, folgender Befehl ausgeführt werden:</p>
+<pre class="fragment">./compile clean
+</pre> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../d5/dfc/installation.html">Installation</a></li>
+    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
+  </ul>
+</div>
+</body>
+</html>
