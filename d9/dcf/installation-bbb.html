@@ -121,7 +121,7 @@ Installation</h1>
 <h2><a class="anchor" id="ubuntu-installation-bbb"></a>
 Ubuntu 12.04</h2>
 <p>Um Ubuntu 12.04 auf dem BBB zu installieren, muss das Image auf die Micro-SD Karte entpackt werden.</p>
-<p>Die Micro-SD Karte muss mit dem PC verbunden werden. Danach müssen die nachfolgenden Kommandos ausgeführt werden. Für __/dev/sdX__ im letzten Schritt muss das entsprechende Gerät für die Micro-SD Karte eingesetzt werden.</p>
+<p>Die Micro-SD Karte muss mit dem PC verbunden werden. Danach müssen die nachfolgenden Kommandos ausgeführt werden. Für <b>/dev/sdX</b> im letzten Schritt muss das entsprechende Gerät für die Micro-SD Karte eingesetzt werden.</p>
 <pre class="fragment">wget -O ubuntu-precise-12.04.3-armhf-3.8.13-bone30.img.xz http://s3.armhf.com/debian/precise/bone/ubuntu-precise-12.04.3-armhf-3.8.13-bone30.img.xz
 sudo su
 xz -cd ubuntu-precise-12.04.3-armhf-3.8.13-bone30.img.xz &gt; /dev/sdX
@@ -153,16 +153,16 @@ sudo apt-get install ros-hydro-move-base
 Konfiguration</h1>
 <h2><a class="anchor" id="lego-installation-bbb"></a>
 Lego NXT</h2>
-<p>Damit der Lego NXT Brick als USB-Gerät erkannt wird und somit auch die Kommunikation zwischen Brick und BBB stattfinden kann, muss eine neue Benutzergruppe erzeugt werden. Die Benutzer, die den Brick nutzen möchten müssen Teil dieser Gruppe sein.</p>
+<p>Damit der Lego NXT Brick als USB-Gerät erkannt wird und somit auch die Kommunikation zwischen Brick und BBB stattfinden kann, muss eine neue Benutzergruppe erzeugt werden. Die Benutzer, die den Brick nutzen möchten, müssen Teil dieser Gruppe sein.</p>
 <pre class="fragment">sudo su
 groupadd lego
 usermod -a -G lego ubuntu
 touch /etc/udev/rules.d/70-lego.rules
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0694", GROUP="lego", MODE="0660"' &gt; /etc/udev/rules.d/70-lego.rules
-</pre><p><b></b> &lt;username&gt; muss dabei durch den Benutzer ersetzt werden, der Teil Gruppe werden soll. Nun muss das BBB neugestartet werden.</p>
+</pre><p><b></b> &lt;username&gt; muss dabei durch den Benutzer ersetzt werden, der Teil der Gruppe werden soll. Nun muss das BBB neugestartet werden.</p>
 <h2><a class="anchor" id="wlan-installation-bbb"></a>
 WLAN</h2>
-<p>Folgendes muss in die Datei <code>/etc/network/interfaces</code> eingefügt und angepasst werden. Wenn dort bereits ein Adapter namens wlan0 existiert, sollte dieser überschrieben werden.</p>
+<p>Folgendes muss in die Datei <b>/etc/network/interfaces</b> eingefügt und angepasst werden. Falls dort bereits ein Adapter namens wlan0 existiert, sollte dieser überschrieben werden.</p>
 <pre class="fragment">auto wlan0
 iface wlan0 inet static
 wpa-ssid "yourSSID"
@@ -173,22 +173,22 @@ gateway 192.168.11.1
 </pre><h2><a class="anchor" id="spi-installation-bbb"></a>
 SPI Device Tree</h2>
 <p>Um den SPI-Bus auf dem BBB zu verwenden, müssen die jeweiligen SPI-Ports über den Device-Tree aktiviert werden. In diesem Abschnitt wird die Installation von SPI0 und SPI1 auf dem Beagle Bone Black erläutert.</p>
-<p>Das Script addOverlayToDeviceTree installiert die overlay Dateien für '''SPI0 (1 chip select)''' und '''SPI1 (2 chips selects)'''.</p>
+<p>Das Script addOverlayToDeviceTree installiert die Overlay-Dateien für '''SPI0 (1 chip select)''' und '''SPI1 (2 chips selects)'''.</p>
 <blockquote class="doxtable">
-<p><b>Nur für angstrom linux</b> &gt; Achtung! Für das neuste angstrom image ist kein opkg dtc Paket verfügbar. Eine einfach Lösung dafür ist das kompilierte dtbo Dateui auf einem Ubuntu Desktop PC zu erzwugen und dann aufs BBB zu kpoeren.</p>
+<p><b>Nur für Angstrom Linux</b> &gt; Achtung! Für das neuste Angstrom image ist kein opkg dtc Paket verfügbar. Eine einfach Lösung dafür ist, die kompilierte dtbo Datei auf einem Ubuntu Desktop PC zu erzeugen und dann aufs BBB zu kopieren.</p>
 <p></p>
 </blockquote>
 <ul>
 <li>Klonen des bbb_setup repository</li>
-<li>Installation von dtc (device tree compiler)</li>
+<li>Installation des dtc (device tree compiler)</li>
 </ul>
 <pre class="fragment">sudo ./dtc.sh
 </pre><ul>
-<li>Das addOverlayToDeviceTree Skript kompiliert und installiert das SPI0 und SPI1 Overlay File.</li>
+<li>Das addOverlayToDeviceTree Skript kompiliert und installiert das SPI0 und SPI1 Overlay-File.</li>
 </ul>
 <pre class="fragment">sudo ./addOverlayToDeviceTree
 </pre><ul>
-<li>Aktivieren von SPI1 beim Start (HDMI wird deaktiviert, da HDMI auch Pins die von SPI1 verwendet werden benutzt und das zu fehlerhafter Kommunikation führt)</li>
+<li>Aktivieren von SPI1 beim Start (HDMI wird deaktiviert, da HDMI auch Pins, die von SPI1 verwendet werden benutzt und das zu fehlerhafter Kommunikation führt)</li>
 <li>Boot Partition mounten.</li>
 </ul>
 <pre class="fragment">mkdir /mnt/boot
@@ -204,9 +204,9 @@ mount /dev/mmcblk0p1 /mnt/boot
 </pre> <hr/>
 <h1><a class="anchor" id="kompilierung-installation-bbb"></a>
 Kompilierung</h1>
-<p>In dem Repository des Projekts existiert die Datei <b>compile</b>. Diese beinhaltet <b>verschiedene Kommandos um das Projekt zu kompilieren</b>. Um das Projekt auf dem Beagle Bone Black zu kompileren, muss <b>in das Repositoryverzeichnis gewechselt</b> und folgendes Kommando ausgeführt werden:</p>
+<p>In dem Repository des Projekts existiert die Datei <b>compile</b>. Diese beinhaltet <b>verschiedene Kommandos um das Projekt zu kompilieren</b>. Um das Projekt auf dem Beagle Bone Black zu kompileren, muss <b>in das Repositoryverzeichnis gewechselt</b> und folgendes Kommando ausgeführt werden.</p>
 <pre class="fragment">./compile beagle
-</pre><p>Um einen kompletten Rebuild durchzuführen muss <b>vor dem oben genannten Befehl</b>, folgender Befehl ausgeführt werden:</p>
+</pre><p>Um einen kompletten Rebuild durchzuführen, muss <b>vor dem oben genannten Befehl</b> folgender Befehl ausgeführt werden.</p>
 <pre class="fragment">./compile clean
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -214,7 +214,7 @@ Kompilierung</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../d5/dfc/installation.html">Installation</a></li>
-    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <li class="footer">Erzeugt am Mon Sep 29 2014 17:04:39 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

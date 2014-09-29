@@ -114,11 +114,11 @@ pid_monitor</h1>
 <p>Im folgenden soll die Anwendung <b>pid_monitor</b> näher beschrieben werden. Dabei wird auf ihren Nutzen und die Bedienung eingegangen.</p>
 <h2><a class="anchor" id="beschreibung-pid-gui-tools"></a>
 Beschreibung</h2>
-<p>Die Anwendung <b>pid_monitor</b>, das sich im gleichnamigen Package befindet, realisiert eine grafische Anwendung um den <b>PID-Regler der RobotControl Node</b> zu beobachten. Außerdem werden Hindernisse, die von den Ultraschallsensoren registriert werden, dargestellt. Die aktuellen Proportional-, Integral- und Differentialanteile des Roboters lassen sich genauso wie die Geschwindigkeit und Winkelgeschwindigkeit durch Schieberegler einstellen.</p>
+<p>Die Anwendung <b>pid_monitor</b>, die sich im gleichnamigen Package befindet, realisiert eine grafische Anwendung um den <b>PID-Regler der RobotControl Node</b> zu beobachten. Außerdem werden Hindernisse, die von den Ultraschallsensoren registriert werden, dargestellt. Die aktuellen Proportional-, Integral- und Differentialanteile des Roboters lassen sich genauso wie die Geschwindigkeit und Winkelgeschwindigkeit durch Schieberegler einstellen.</p>
 <p>An den integrierten Graphen kann das <b>Einschwingverhalten des PID-Regler</b> beobachtet werden. Weiterhin können durch das <a href="http://de.wikipedia.org/wiki/Faustformelverfahren_%28Automatisierungstechnik%29#Methode_von_Ziegler_und_Nichols">Ziegler–Nichols Verfahren</a> die optimalen PID-Parameter ermittelt werden.</p>
 <h2><a class="anchor" id="bedienung-pid-gui-tools"></a>
 Bedienung</h2>
-<p>Um <b>pid_monitor</b> zu starten werden ein Beagle Bone Black und ein Computer benötigt. Beide müssen sich im gleichen Netzwerk befinden. Nun muss in das Wurzelverzeichnis des Repositorys gewechselt werden. Dort muss nun die Datei <b>start</b> mit einem beliebigen Editor geöffnet und die IP Variablen sowohl auf dem BBB als auch auf dem PC <b>mit den entsprechenden IPs</b> belegt werden. Zuerst muss die Anwendung auf dem PC mit folgendem Befehl gestartet werden:</p>
+<p>Um den <b>pid_monitor</b> zu starten werden ein Beagle Bone Black und ein Computer benötigt. Beide müssen sich im gleichen Netzwerk befinden. Nun muss in das Wurzelverzeichnis des Repositorys gewechselt werden. Dort muss nun die Datei <b>start</b> mit einem beliebigen Editor geöffnet und die IP Variablen sowohl auf dem BBB als auch auf dem PC <b>mit den entsprechenden IPs</b> belegt werden. Zuerst muss die Anwendung auf dem PC mit folgendem Befehl gestartet werden:</p>
 <pre class="fragment">./start pm_p
 </pre><p>Auf dem BBB nun folgenden Befehl ausführen:</p>
 <pre class="fragment">./start rc_b
@@ -126,10 +126,10 @@ Bedienung</h2>
 <div class="image">
 <img src="../../pid-monitor.png" alt="pid-monitor.png"/>
 </div>
-<p>Mit den Schiebereglern im rot umrahmten Bereich können die <b>Parameter für den PID-Regler</b> eingestellt werden. <b>Kp</b> repräsentiert hierbei den Proportional-, <b>Ki</b> den Integral- und <b>Kp</b> den Differentialanteil.</p>
+<p>Mit den Schiebereglern im rot umrahmten Bereich können die <b>Parameter für den PID-Regler</b> eingestellt werden. <b>Kp</b> repräsentiert hierbei den Proportional-, <b>Ki</b> den Integral- und <b>Kd</b> den Differentialanteil.</p>
 <p>In dem hellblauen Bereich befinden sich die Schieberegler um die Geschwindigkeit und die Winkelgeschwindigkeit einzustellen. Mit <b>v</b> kann die Geschwindigkeit und mit <b>w</b> die Winkelgeschwindigkeit geregelt werden. Der Button <b>brake</b> stoppt die Motoren des Roboters.</p>
-<p>Der gelbe Bereich kennzeichnet die Geschwindigkeitsanzeigen. Auch gilt für <b>v</b> und <b>w</b> das gleich wie im roten Bereich. Unter der Überschrift <b>Target Velocity</b> befinden sich die eingestellten Sollgeschwindigkeiten. Bei <b>Measured Velocity</b> befinden sich die tatsächlich gemessenen Geschwindigkeiten, die über das ROS-Kommunikationssystem empfangen werden.</p>
-<p>Im grünen Bereich befinden sich nun die Graphen, die die Geschwindigkeit und Winkelgeschwindigkeit über die Zeit auftragen. Die <b>Y-Achse</b> stellt die gemessene Geschwindigkeit in m/s dar (bei Winkelgeschwindigkeit Rad/s). Die X-Achse zeigt die Nummer der Messung an. 3 bedeutet hierbei die 3. Messung. Die Zeit zwischen zwei Messungen ist dabei vom eingestellten Abtastintervall abhängig.</p>
+<p>Der gelbe Bereich kennzeichnet die Geschwindigkeitsanzeigen. Auch gilt für <b>v</b> und <b>w</b> das gleich wie im hellblauen Bereich. Unter der Überschrift <b>Target Velocity</b> befinden sich die eingestellten Sollgeschwindigkeiten. Bei <b>Measured Velocity</b> befinden sich die tatsächlich gemessenen Geschwindigkeiten, die über das ROS-Kommunikationssystem empfangen werden.</p>
+<p>Im grünen Bereich befinden sich nun die Graphen, die die Geschwindigkeit und Winkelgeschwindigkeit über die Zeit auftragen. Die <b>Y-Achse</b> stellt die gemessene Geschwindigkeit in m/s dar (bei Winkelgeschwindigkeit Rad/s). Die X-Achse zeigt die Nummer der Messung an. 50 bedeutet hierbei die 50. Messung. Die Zeit zwischen zwei Messungen ist dabei vom eingestellten Abtastintervall abhängig.</p>
 <p>Der dunkelblaue Bereich zeigt die Ultraschallsensormessungen. Der <b>blaue Punkt</b> stellt den Roboter dar und die <b>roten Punkte</b> zeigen Hindernisse, die von den Sensoren registriert werden.</p>
 <h1><a class="anchor" id="map_monitor-gui-tools"></a>
 map_monitor</h1>
@@ -138,7 +138,7 @@ Beschreibung</h2>
 <p>Die Anwendung <b>map_monitor</b> dient der Beobachtung der Odometrie des Roboters und der Aufzeichnung der Umgebungskarte. Mithilfe der Odometrie und Sensordaten des Roboters werden seine Bewegungsroute und Hindernisse in der Umgebung in eine grafische Oberfläche eingezeichnet. Mithilfe dieser Anwendung konnte festgestellt werden, wie schlecht die Odometrie des Roboters tatsächlich ist.</p>
 <h2><a class="anchor" id="bedienung-map-gui-tools"></a>
 Bedienung</h2>
-<p>Um <b>map_monitor</b> zu starten werden ein Beagle Bone Black und ein Computer benötigt. Beide müssen sich im gleichen Netzwerk befinden. Nun muss in das Wurzelverzeichnis des Repositorys gewechselt werden. Dort muss nun die Datei <b>start</b> mit einem beliebigen Editor geöffnet und die IP Variablen sowohl auf dem BBB als auch auf dem PC <b>mit den entsprechenden IPs</b> belegt werden. Zuerst muss die Anwendung auf dem PC mit folgendem Befehl gestartet werden:</p>
+<p>Um den <b>map_monitor</b> zu starten werden ein Beagle Bone Black und ein Computer benötigt. Beide müssen sich im gleichen Netzwerk befinden. Nun muss in das Wurzelverzeichnis des Repositorys gewechselt werden. Dort muss nun die Datei <b>start</b> mit einem beliebigen Editor geöffnet und die IP Variablen sowohl auf dem BBB als auch auf dem PC <b>mit den entsprechenden IPs</b> belegt werden. Zuerst muss die Anwendung auf dem PC mit folgendem Befehl gestartet werden:</p>
 <pre class="fragment">./start map_p
 </pre><p>Auf dem BBB nun folgenden Befehl ausführen:</p>
 <pre class="fragment">./start rc_b
@@ -156,7 +156,7 @@ Bedienung</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../db/d93/roboter.html">Roboter</a></li>
-    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <li class="footer">Erzeugt am Mon Sep 29 2014 17:04:39 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

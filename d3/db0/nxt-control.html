@@ -132,15 +132,15 @@ make
 </pre><p>Nun steht die Bibiliothek im Verzeichnis <b>build</b> zur Verfügung.</p>
 <h1><a class="anchor" id="entwicklungshergang-nxt-control"></a>
 Entwicklungshergang</h1>
-<p>Im Rahmen dieses Projekts war eine Form der <b>Kommunikation mit dem Lego NXT Brick</b> unverzichtbar. In ersten Ansätzen wurde eine <b>Opensource-Pythonbibliothek</b> verwendet (<a href="https://code.google.com/p/nxt-python/">nxt-python</a>). Bei ersten Versuchen auf dem BBB wurde jedoch schnell klar, dass eine Interpretersprache wie Python für ein kleines Board wie das Beagle Bone ungeeignet ist. Die <b>Auslastung war deutlich zu hoch</b> und Abtastintervalle konnten nicht eingehalten werden. Ein Blick auf die Systemauslastung mit dem Befehl <em>top</em> hat diesen Verdacht auch gleich bestätigt. Der Pythoninterpreter hat das System zu 100% ausgelastet.</p>
-<p>Damit wurde die Bibliothek unbrauchbar für dieses Projekt. Es gibt auch <b>C++ Bibliotheken</b>, die die Kommunikation mit dem Brick ermöglichen (<a href="https://github.com/cmwslw/nxt-plus-plus">nxt++</a>). Doch waren diese nicht so komfortabel und schön objektorientiert zu nutzen wie die Pythonbibliothek. Daher wurde eine eigene kleine Bibliothek implementiert, die in ihrer Struktur der Pythonbibliothek sehr ähnelt. Durch eigene Implementierung in C++ war nun auch die CPU-Auslastung des Systems auf <b>unter 30%</b> gesunken, wodurch alle Abtastintervall eingehalten werden konnten und noch genügend Resourcen für größere Aufgaben vorhanden waren. </p>
+<p>Im Rahmen dieses Projekts war eine Form der <b>Kommunikation mit dem Lego NXT Brick</b> unverzichtbar. In ersten Ansätzen wurde eine <b>Opensource-Pythonbibliothek</b> verwendet (<a href="https://code.google.com/p/nxt-python/">nxt-python</a>). Bei ersten Versuchen auf dem BBB wurde jedoch schnell klar, dass eine Interpretersprache wie Python für ein kleines Board wie das Beagle Bone ungeeignet ist. Die <b>Auslastung war deutlich zu hoch</b> und Abtastintervalle konnten nicht eingehalten werden. Ein Blick auf die Systemauslastung mit dem Befehl <em>top</em> hat diesen Verdacht bestätigt. Der Pythoninterpreter hat das System zu 100% ausgelastet.</p>
+<p>Damit wurde die Bibliothek unbrauchbar für dieses Projekt. Es gibt auch <b>C++ Bibliotheken</b>, die die Kommunikation mit dem Brick ermöglichen (<a href="https://github.com/cmwslw/nxt-plus-plus">nxt++</a>). Doch waren diese nicht so komfortabel und schön objektorientiert zu nutzen wie die Pythonbibliothek. Daher wurde eine eigene kleine Bibliothek implementiert, die in ihrer Struktur der Pythonbibliothek sehr ähnelt. Durch eigene Implementierung in C++ war nun auch die CPU-Auslastung des Systems auf <b>unter 30%</b> gesunken, wodurch alle Abtastintervalle eingehalten werden konnten und noch genügend Ressourcen für größere Aufgaben vorhanden waren. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../db/d93/roboter.html">Roboter</a></li>
-    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <li class="footer">Erzeugt am Mon Sep 29 2014 17:04:39 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

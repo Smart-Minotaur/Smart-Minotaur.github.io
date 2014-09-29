@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('d6/d42/installation-pc.html','../../')
 </div>
 <div class="textblock"><h1><a class="anchor" id="beschreibung-installation-pc"></a>
 Beschreibung</h1>
-<p>Auf dem Entwicklungsrechner wird ebenso wie auf dem Beagle Bone Black <b>Ubuntu in der Version 12.04</b> verwendet. Vorzugsweise sollte die 32bit Version benutzt werden, da ansonsten die benötigten 64bit Bibliotheken nachinstalliert werden müssen. Die Installation des Betriebssystem wird hier nicht weiter erklärt, da sich genügend Anleitungen und Tools für diesen Zweck im Internet finden. <hr/>
+<p>Auf dem Entwicklungsrechner wird, ebenso wie auf dem Beagle Bone Black, <b>Ubuntu in der Version 12.04</b> verwendet. Vorzugsweise sollte die 32bit Version benutzt werden, da ansonsten die benötigten 64bit Bibliotheken nachinstalliert werden müssen. Die Installation des Betriebssystem wird hier nicht weiter erklärt, da sich genügend Anleitungen und Tools für diesen Zweck im Internet finden. <hr/>
 <h1><a class="anchor" id="installation-installation-pc"></a>
 Installation</h1>
 <h2><a class="anchor" id="Programme"></a>
@@ -132,7 +132,7 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
 </pre><h2><a class="anchor" id="cross-gcc-installation-pc"></a>
 GCC-ARM 4.8</h2>
-<p>Zum cross-compilieren der pln_minotaur Bibliothek welche zum Ansteuern der Maussensoren verwendet wird wird eine Cross-Compile Toolchain verwedet. Dabei wird eine bereits kompilierte Toolchain für Linux von Linaro verwendet.</p>
+<p>Zum cross-compilieren der pln_minotaur Bibliothek, welche zum Ansteuern der Maussensoren verwendet wird, wird eine Cross-Compile Toolchain verwendet. Dabei wird eine bereits kompilierte Toolchain für Linux von Linaro verwendet.</p>
 <h2><a class="anchor" id="ros-installation-pc"></a>
 ROS</h2>
 <p>Die verwendete ROS Version ist <b>hydro</b>. Um ROS hydro auf dem Computer zu installieren, müssen folgende Befehle ausgeführt werden.</p>
@@ -154,18 +154,18 @@ QT4</h2>
 Konfiguration</h1>
 <h2><a class="anchor" id="lego-installation-pc"></a>
 Lego NXT</h2>
-<p>Damit der <b>Lego NXT Brick als USB-Gerät erkannt wird</b> und somit auch die Kommunikation zwischen Brick und PC stattfinden kann, muss eine neue Benutzergruppe erzeugt werden. Die Benutzer, die den Brick nutzen möchten müssen Teil dieser Gruppe sein. Dieser Schritt ist nicht zwingend notwendig. Er wird nur benötigt, wenn der Brick zu Testzwecken direkt vom Computer aus angesteuert werden soll.</p>
+<p>Damit der <b>Lego NXT Brick als USB-Gerät erkannt wird</b> und somit auch die Kommunikation zwischen Brick und PC stattfinden kann, muss eine neue Benutzergruppe erzeugt werden. Die Benutzer, die den Brick nutzen möchten, müssen Teil dieser Gruppe sein. Dieser Schritt ist nicht zwingend notwendig. Er wird nur benötigt, wenn der Brick zu Testzwecken direkt vom Computer aus angesteuert werden soll.</p>
 <pre class="fragment">sudo su
 groupadd lego
 usermod -a -G lego &lt;username&gt;
 touch /etc/udev/rules.d/70-lego.rules
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0694", GROUP="lego", MODE="0660"' &gt; /etc/udev/rules.d/70-lego.rules
-</pre><p><b></b> &lt;username&gt; muss dabei durch den Benutzer ersetzt werden, der Teil Gruppe werden soll. Um die Einstellungen zu übernehmen, muss der Computer neugestartet werden. <hr/>
+</pre><p>&lt;username&gt; muss dabei durch den Benutzer ersetzt werden, der Teil der Gruppe werden soll. Um diese Einstellungen zu übernehmen, muss der Computer neugestartet werden. <hr/>
 <h1><a class="anchor" id="kompilierung-installation-pc"></a>
 Kompilierung</h1>
-<p>In dem Repository des Projekts existiert die Datei <b>compile</b>. Diese beinhaltet <b>verschiedene Kommandos um das Projekt zu kompilieren</b>. Um das Projekt auf dem PC zu kompileren, muss <b>in das Repositoryverzeichnis gewechselt</b> und folgendes Kommando ausgeführt werden:</p>
+<p>In dem Repository des Projekts existiert die Datei <b>compile</b>. Diese beinhaltet <b>verschiedene Kommandos um das Projekt zu kompilieren</b>. Um das Projekt auf dem PC zu kompilieren, muss <b>in das Repositoryverzeichnis gewechselt</b> und folgendes Kommando ausgeführt werden:</p>
 <pre class="fragment">./compile pc
-</pre><p>Um einen kompletten Rebuild durchzuführen muss <b>vor dem oben genannten Befehl</b>, folgender Befehl ausgeführt werden:</p>
+</pre><p>Um einen kompletten Rebuild durchzuführen, muss <b>vor dem oben genannten Befehl</b> folgender Befehl ausgeführt werden:</p>
 <pre class="fragment">./compile clean
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -173,7 +173,7 @@ Kompilierung</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../d5/dfc/installation.html">Installation</a></li>
-    <li class="footer">Erzeugt am Mon Sep 29 2014 14:43:12 für Smart Minotaur von
+    <li class="footer">Erzeugt am Mon Sep 29 2014 17:04:39 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
