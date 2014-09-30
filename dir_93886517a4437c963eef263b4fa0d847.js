@@ -1,4 +1,0 @@
-var dir_93886517a4437c963eef263b4fa0d847 =
-[
-    [ "minotaur_maze", "dir_903671497daa3e5e4386d6f88444650e.html", "dir_903671497daa3e5e4386d6f88444650e" ]
-];
