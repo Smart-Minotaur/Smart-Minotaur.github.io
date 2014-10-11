@@ -18,6 +18,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -121,7 +127,7 @@ $(document).ready(function(){initNavTree('db/d93/roboter.html','../../');});
 Beschreibung</h1>
 <p>Die Aufgabe des Roboters ist es <b>ein Labyrinth zu karthographieren</b>. Der Roboter verfügt über einen <b>Differentialantrieb</b> und kann seine Umgebung mithilfe von <b>Ultraschallsensoren</b> wahrnehmen. Sensoren und Antrieb werden über einen <b>Lego NXT Brick</b> angesteuert.</p>
 <p>Zusätzlich wurde auf dem Roboter ein <b>Beagle Bone Black</b> montiert. Dieses bietet <b>mehr Rechenleistung und eine flexiblere Programmierung</b> als der Brick, auf welchem lediglich in der beschränkten Programmiersprache NXC gearbeitet werden kann. Außerdem wird das BBB benötigt um zusätzliche die <b>Maussensoren</b> über den SPI-Bus anzusprechen. Diese Maussensoren werden verwendet, um die zurückgelegte Strecke des Roboters zu messen und somit dessen <b>Odometrie zu verbessern</b>.</p>
-<p>Als Programmiersprache wird in dem kompletten Projekt <b>C++</b> verwendet. Außerdem wird das Framework <b>Robot Operative System (ROS)</b> in der Version <b>hydro</b> verwendet. Mit diesem Framework wird die Kommunikationen einzelner Komponenten und Programme in einem verteilten System stark abstrahiert und dadurch vereinfacht. Außerdem bietet es viele Funktionen und Programme zur Navigation und Lokalisierung von Robotern. Die Hauptaufgabe von ROS in diesem Projekt ist die <b>Interprozesskommunikation</b> über das WLAN (siehe <a class="el" href="../../db/d93/roboter.html#kommunikation-roboter">Kommunikation</a>). In einem der Ansätze wird außerdem auch der ROS Navigation Stack verwendet, um den Roboter zu navigieren (siehe <a class="el" href="../../da/d5d/histogramm.html">Histogramm Ansatz</a>).</p>
+<p>Als Programmiersprache wird in dem kompletten Projekt <b>C++</b> verwendet. Außerdem wird das Framework <b>Robot Operative System (ROS)</b> in der Version <b>hydro</b> verwendet. Mit diesem Framework wird die Kommunikationen einzelner Komponenten und Programme in einem verteilten System stark abstrahiert und dadurch vereinfacht. Außerdem bietet es viele Funktionen und Programme zur Navigation und Lokalisierung von Robotern. Die Hauptaufgabe von ROS in diesem Projekt ist die <b>Interprozesskommunikation</b> über das WLAN (siehe <a class="el" href="../../db/d93/roboter.html#kommunikation-roboter">Kommunikation</a>). In einem der Ansätze wird außerdem auch der ROS Navigation Stack verwendet, um den Roboter zu navigieren (siehe <a class="el" href="../../da/d5d/histogramm.html">Belegtheitsgitter Ansatz</a>).</p>
 <p>In diesem Teil des Wikis wird der Roboter des Projekts und dessen Implementierung näher beleuchtet. Da die Maussensoren nicht in den Roboter implementiert wurden, sollte zu diesem Thema die Seite <a class="el" href="../../da/df2/maussensoren.html">Maussensoren</a> herangezogen werden.</p>
 <div class="image">
 <img src="../../labyrinth_1.jpg" alt="labyrinth_1.jpg"/>
@@ -146,9 +152,9 @@ Packages</h2>
 <tr>
 <td align="left"><b>pid_monitor</b> </td><td align="left">In diesem Package wird eine <b>GUI-Applikation</b> realisiert, mit der sich das Verhalten des PID-Reglers in Form von Graphen betrachten lässt. Der Roboter kann außerdem ferngesteuert werden. So können dessen Einschwing- und Ausgleichverhalten beobachtet werden. Neben den Motoren bietet die Applikation auch die Möglichkeit, Hindernisse mit den Ultraschallsensoren wahrzunehmen. Mehr dazu im Abschnitt <a class="el" href="../../db/d93/roboter.html#gui-tools-projekt">GUI Tools</a>. </td></tr>
 <tr>
-<td align="left"><b>minotaur_map</b> </td><td align="left">Das Package <b>minotaur_map</b> realisiert den <b>ersten Ansatz</b> dieses Projektes. Es beinhaltet Funktionen und Strukturen um <b>Histogrammkarten</b> zu erzeugen und durch diese hindurch zu navigieren. Außerdem nutzt es die <b>ROS Navigation Stack Schnittstelle</b>, um den Roboter anzusteuern. Mehr Informationen dazu finden sich im Abschnitt <a class="el" href="../../db/d93/roboter.html#ansaetze-roboter">Ansätze</a>. </td></tr>
+<td align="left"><b>minotaur_map</b> </td><td align="left">Das Package <b>minotaur_map</b> realisiert den <b>ersten Ansatz</b> dieses Projektes. Es beinhaltet Funktionen und Strukturen um <b>Belegtheitsgitter</b> zu erzeugen und durch diese hindurch zu navigieren. Außerdem nutzt es die <b>ROS Navigation Stack Schnittstelle</b>, um den Roboter anzusteuern. Mehr Informationen dazu finden sich im Abschnitt <a class="el" href="../../db/d93/roboter.html#ansaetze-roboter">Ansätze</a>. </td></tr>
 <tr>
-<td align="left"><b>map_monitor</b> </td><td align="left">Bei <b>map_monitor</b> handelt es sich um ein Package, dass eine <b>GUI-Applikation</b> für die Histogrammkarte realisiert. Der Roboter kann angesteuert werden, während <b>eine Karte live mitgezeichnet</b> wird. Mit diesem Tool kann also die Qualität der Karte und auch das Verhalten des Erstellungsalgorithmus beobachtet und bewertet werden. Mehr Informationen finden sich im Abschnitt <a class="el" href="../../db/d93/roboter.html#gui-tools-projekt">GUI Tools</a>. </td></tr>
+<td align="left"><b>map_monitor</b> </td><td align="left">Bei <b>map_monitor</b> handelt es sich um ein Package, das eine <b>GUI-Applikation</b> für das Belegtheitsgitter realisiert. Der Roboter kann angesteuert werden, während <b>eine Karte live mitgezeichnet</b> wird. Mit diesem Tool kann also die Qualität der Karte und auch das Verhalten des Erstellungsalgorithmus beobachtet und bewertet werden. Mehr Informationen finden sich im Abschnitt <a class="el" href="../../db/d93/roboter.html#gui-tools-projekt">GUI Tools</a>. </td></tr>
 <tr>
 <td align="left"><b>minotaur_maze</b> </td><td align="left">In dem Package <b>minotaur_maze</b> wird der <b>zweite Ansatz</b> dieses Projektes realisiert. Es enthält Strukturen und Funktionen, um den Roboter in einem <b>graphenähnlichen Labyrinth</b> zu bewegen und eine Karte dieses Graphen zu erstellen. Mehr dazu im Abschnitt <a class="el" href="../../db/d93/roboter.html#ansaetze-roboter">Ansätze</a>. </td></tr>
 <tr>
@@ -194,10 +200,10 @@ GUI Tools</h2>
 Ansätze</h2>
 <p>Im Rahmen dieses Projektes wurden mehrere Lösungsansätze zum Lösen des Labyrinths verfolgt.</p>
 <ol type="1">
-<li><a class="el" href="../../da/d5d/histogramm.html">Histogramm Ansatz</a></li>
+<li><a class="el" href="../../da/d5d/histogramm.html">Belegtheitsgitter Ansatz</a></li>
 <li><a class="el" href="../../d4/ddd/graphen.html">Graphen Ansatz</a></li>
 </ol>
-<p>Im <b>ersten Ansatz</b> wurde eine <b>Histogrammkarte</b> angefertigt und der Roboter sollte sich anhand dieser Karte und mithilfe des ROS Navigation Stacks durch das Labyrinth bewegen.</p>
+<p>Im <b>ersten Ansatz</b> wurde ein <b>Belegtheitsgitter</b> angefertigt und der Roboter sollte sich anhand dieser Karte und mithilfe des ROS Navigation Stacks durch das Labyrinth bewegen.</p>
 <p>Im <b>zweiten Ansatz</b> wurde der Roboter direkt angesteuert. Das Labyrinth wurde als <b>Graph</b> betracht und in Zellen gleicher Größe unterteilt.</p>
 <h2><a class="anchor" id="maussensoren-roboter"></a>
 Maussensoren</h2>
@@ -221,7 +227,7 @@ Navigation</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li>
-    <li class="footer">Erzeugt am Die Sep 30 2014 12:58:27 für Smart Minotaur von
+    <li class="footer">Erzeugt am Sam Okt 11 2014 17:16:06 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

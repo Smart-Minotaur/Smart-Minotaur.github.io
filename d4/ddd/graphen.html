@@ -18,6 +18,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -109,7 +115,7 @@ $(document).ready(function(){initNavTree('d4/ddd/graphen.html','../../');});
 </div>
 <div class="textblock"><h1><a class="anchor" id="beschreibung-graphen"></a>
 Beschreibung</h1>
-<p>Da der <a class="el" href="../../da/d5d/histogramm.html">Histogramm Ansatz</a> ohne gute Odometrie nicht gut umsetzbar ist, wurde ein zweiter Ansatz gestartet. Das Labyrinth wurde in quadratische Zellen eingeteilt. Die Seitenlänge einer Zelle enspricht dabei der Länge einer Holzwand aus dem Labyrinth. Der Roboter bewegt sich dann stets <b>von Zelle zu Zelle</b>. Wenn der Roboter etwa in der Mitte einer Zelle angekommen ist prüft er zunächst in welchen Richtungen sich Wände befinden und in welche Richtungen er weiterfahren kann. Dies wird in einer <b>Karte</b> dokumentiert und anschließend wird durch einen Algorithmus bestimmt, welche benachbarte Zelle der Roboter als nächstes ansteuert.</p>
+<p>Da der <a class="el" href="../../da/d5d/histogramm.html">Belegtheitsgitter Ansatz</a> ohne gute Odometrie nicht gut umsetzbar ist, wurde ein zweiter Ansatz gestartet. Das Labyrinth wurde in quadratische Zellen eingeteilt. Die Seitenlänge einer Zelle enspricht dabei der Länge einer Holzwand aus dem Labyrinth. Der Roboter bewegt sich dann stets <b>von Zelle zu Zelle</b>. Wenn der Roboter etwa in der Mitte einer Zelle angekommen ist prüft er zunächst in welchen Richtungen sich Wände befinden und in welche Richtungen er weiterfahren kann. Dies wird in einer <b>Karte</b> dokumentiert und anschließend wird durch einen Algorithmus bestimmt, welche benachbarte Zelle der Roboter als nächstes ansteuert.</p>
 <h1><a class="anchor" id="umsetzung-graphen"></a>
 Umsetzung</h1>
 <p>Die Sourcedateien sind im package <b>minotaur_maze</b> zu finden.</p>
@@ -138,7 +144,7 @@ Probleme</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../db/d93/roboter.html">Roboter</a></li>
-    <li class="footer">Erzeugt am Die Sep 30 2014 12:58:27 für Smart Minotaur von
+    <li class="footer">Erzeugt am Sam Okt 11 2014 17:16:06 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

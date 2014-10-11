@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"db/d8c/classnxt_1_1_telegram_factory.html":[5,0,1,17],
+"db/d8c/classnxt_1_1_telegram_factory.html#a067be31544cd55bb3e96c34c59e5d07a":[5,0,1,17,20],
+"db/d8c/classnxt_1_1_telegram_factory.html#a0752f48cef364289eb4f41fff8d54d02":[5,0,1,17,10],
+"db/d8c/classnxt_1_1_telegram_factory.html#a23598951cd9a03c20f294eca85114943":[5,0,1,17,14],
 "db/d8c/classnxt_1_1_telegram_factory.html#a2ae2d4b413f4935b2e35101e8bb17d38":[5,0,1,17,9],
 "db/d8c/classnxt_1_1_telegram_factory.html#a2d7ef1fd0827368122001909dddf74e5":[5,0,1,17,19],
 "db/d8c/classnxt_1_1_telegram_factory.html#a303324c7b65f5ec7aa63ea817f3ce6a8":[5,0,1,17,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "de/d65/classminotaur_1_1_sensor_setting.html#a2b108c67728034463bc6c3d8bf3ca026":[5,0,0,13,2],
 "de/d65/classminotaur_1_1_sensor_setting.html#a37065efbec0d7e2d43e71d3477879985":[5,0,0,13,5],
 "de/d65/classminotaur_1_1_sensor_setting.html#a589ac1cbf5f85e627089637d1273db8c":[5,0,0,13,6],
-"de/d65/classminotaur_1_1_sensor_setting.html#a8d9913f1e62efd34f3a18f5b45e6c6f4":[5,0,0,13,3],
-"de/d65/classminotaur_1_1_sensor_setting.html#a94cf98ad96721f4b84599c39111dc67a":[5,0,0,13,4],
-"de/d65/classminotaur_1_1_sensor_setting.html#ac694350c5ebf7adfeef619d7d3eb9728":[5,0,0,13,1],
-"de/d65/classminotaur_1_1_sensor_setting.html#af419ad6a8a179682b50f75497c7c3a1c":[5,0,0,13,0],
-"de/d6e/classminotaur_1_1_stay_in_mid_navigator.html":[5,0,0,48]
+"de/d65/classminotaur_1_1_sensor_setting.html#a8d9913f1e62efd34f3a18f5b45e6c6f4":[5,0,0,13,3]
 };

@@ -31,7 +31,7 @@ var roboter =
         [ "Bedienung", "d3/ddc/gui-tools.html#bedienung-map-gui-tools", null ]
       ] ]
     ] ],
-    [ "Histogramm Ansatz", "da/d5d/histogramm.html", [
+    [ "Belegtheitsgitter Ansatz", "da/d5d/histogramm.html", [
       [ "Beschreibung", "da/d5d/histogramm.html#beschreibung-histogramm", null ],
       [ "Umsetzung", "da/d5d/histogramm.html#umsetzung-histogramm", [
         [ "Kartografierung", "da/d5d/histogramm.html#kartografierung-histogramm", null ],

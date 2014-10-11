@@ -10,9 +10,14 @@ var maussensoren =
     ] ],
     [ "Kommunikation", "da/df2/maussensoren.html#communication", null ],
     [ "Kalibrierung", "da/df2/maussensoren.html#calibration", null ],
-    [ "Berechnung der Position und Ausrichtung des Roboters", "da/df2/maussensoren.html#localization", [
+    [ "Lokalisierung", "da/df2/maussensoren.html#localization", [
       [ "Ausgangssituation", "da/df2/maussensoren.html#ausgang", null ],
-      [ "Berechnung", "da/df2/maussensoren.html#ber", null ],
+      [ "Bestimmung des Steuervektors", "da/df2/maussensoren.html#vandomega", null ],
+      [ "Bestimmung des Steuervektors - Ansatz 1", "da/df2/maussensoren.html#vandomega1", [
+        [ "Einfache Montierung", "da/df2/maussensoren.html#einfach", null ],
+        [ "Flexible Montierung", "da/df2/maussensoren.html#flexibel", null ]
+      ] ],
+      [ "Bestimmung des Steuervektors - Ansatz 2", "da/df2/maussensoren.html#vandomega2", null ],
       [ "Implementierung", "da/df2/maussensoren.html#impl", null ]
     ] ],
     [ "Probleme", "da/df2/maussensoren.html#problems", [

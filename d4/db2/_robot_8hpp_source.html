@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Smart Minotaur: /home/fabian/develop/tmp/nxt_minotaur/src/mouse_monitor_pc/include/mouse_monitor_pc/Robot.hpp Quellcode</title>
+<title>Smart Minotaur: /home/fabian/develop/nxt_minotaur/src/mouse_monitor_pc/include/mouse_monitor_pc/Robot.hpp Quellcode</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -18,6 +18,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -199,7 +205,7 @@ $(document).ready(function(){initNavTree('d4/db2/_robot_8hpp_source.html','../..
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        distanceToSensor_x(dx),</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        distanceToSensor_y(dy) {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        sensorAngle = (M_PI/2.0) - atan(distanceToSensor_y/distanceToSensor_x);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        sensorAngle = (M_PI/2.0) - std::atan2(distanceToSensor_y, distanceToSensor_x);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        m = tan(sensorAngle);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        distanceToSensor_radius = sqrt(pow(distanceToSensor_x, 2) + pow(distanceToSensor_y, 2));</div>
@@ -248,8 +254,8 @@ $(document).ready(function(){initNavTree('d4/db2/_robot_8hpp_source.html','../..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_08b6494b0a0dc9952d68c558cf0d36bc.html">src</a></li><li class="navelem"><a class="el" href="../../dir_dac5b2ecc37040847940a83203aae3f5.html">mouse_monitor_pc</a></li><li class="navelem"><a class="el" href="../../dir_be5c2f3a1218dbebe579287b46c46936.html">include</a></li><li class="navelem"><a class="el" href="../../dir_d0c774897ba55707ed4b40931a590059.html">mouse_monitor_pc</a></li><li class="navelem"><b>Robot.hpp</b></li>
-    <li class="footer">Erzeugt am Die Sep 30 2014 12:58:27 für Smart Minotaur von
+    <li class="navelem"><a class="el" href="../../dir_3cb0bc422fda54cff9ce3fcea62c5f8a.html">src</a></li><li class="navelem"><a class="el" href="../../dir_bdfdac572110e7bcc26ff96e99274c4e.html">mouse_monitor_pc</a></li><li class="navelem"><a class="el" href="../../dir_f47231d15db2f01c4869bc12b566aded.html">include</a></li><li class="navelem"><a class="el" href="../../dir_45d772296c7584719daa3a90f7103f17.html">mouse_monitor_pc</a></li><li class="navelem"><b>Robot.hpp</b></li>
+    <li class="footer">Erzeugt am Sam Okt 11 2014 17:16:05 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

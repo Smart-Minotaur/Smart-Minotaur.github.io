@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Smart Minotaur: Histogramm Ansatz</title>
+<title>Smart Minotaur: Belegtheitsgitter Ansatz</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -18,6 +18,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +101,7 @@ $(document).ready(function(){initNavTree('da/d5d/histogramm.html','../../');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Histogramm Ansatz </div>  </div>
+<div class="title">Belegtheitsgitter Ansatz </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Inhaltsverzeichnis</h3>
@@ -109,8 +115,8 @@ $(document).ready(function(){initNavTree('da/d5d/histogramm.html','../../');});
 </div>
 <div class="textblock"><h1><a class="anchor" id="beschreibung-histogramm"></a>
 Beschreibung</h1>
-<p>Der Histogramm Ansatz wurde in dem Package <b>minotaur_map</b> realisiert. In diesem Ansatz wurde die Karte des Labyrinths mithilfe eines Histogrammfeldes aufgezeichnet. Wie in jeder Anwendung läuft auf dem Beagle Bone die <b>RobotControl Node</b>. Außerdem läuft auf dem Beagle Bone die ROS-Node <b>Movebase</b>. Diese realisiert die grundlegende Kommunikation des <b>ROS-Navigation Stack</b>. Dadurch kann Movebase eine globale Zielkoordinate für den Roboter übergeben werden und Movebase navigiert den Roboter an diese Koordinate. Während seiner Navigation wird über Ultraschallsensoren die Umgebungskarte angefertigt.</p>
-<p>Aufgrund sehr schlechter Odometrie und der daraus resultierenden unbenutzbaren Karte, gibt es hierfür keine fertig implementierten Navigationsalgorithmen. Die Histogrammkarte kann jedoch mit dem Tool <b>map_monitor</b> benutzt und ausprobiert werden. Mehr findet sich dazu auf der Seite <a class="el" href="../../d3/ddc/gui-tools.html">GUI Tools</a>.</p>
+<p>Der Belegtheitsgitter Ansatz wurde in dem Package <b>minotaur_map</b> realisiert. In diesem Ansatz wurde die Karte des Labyrinths mithilfe eines Belegtheitsgitters aufgezeichnet. Wie in jeder Anwendung läuft auf dem Beagle Bone die <b>RobotControl Node</b>. Außerdem läuft auf dem Beagle Bone die ROS-Node <b>Movebase</b>. Diese realisiert die grundlegende Kommunikation des <b>ROS-Navigation Stack</b>. Dadurch kann Movebase eine globale Zielkoordinate für den Roboter übergeben werden und Movebase navigiert den Roboter an diese Koordinate. Während seiner Navigation wird über Ultraschallsensoren die Umgebungskarte angefertigt.</p>
+<p>Aufgrund sehr schlechter Odometrie und der daraus resultierenden unbenutzbaren Karte, gibt es hierfür keine fertig implementierten Navigationsalgorithmen. Das Belegtheitsgitter kann jedoch mit dem Tool <b>map_monitor</b> benutzt und ausprobiert werden. Mehr findet sich dazu auf der Seite <a class="el" href="../../d3/ddc/gui-tools.html">GUI Tools</a>.</p>
 <h1><a class="anchor" id="umsetzung-histogramm"></a>
 Umsetzung</h1>
 <p>Wie bereits erwähnt gibt es in diesem Ansatz keine fertiggestellten Navigationsalgorithmen. Jedoch sind bereits <b>Templates</b> für einen Bug 0 und <a href="http://de.wikipedia.org/wiki/L%C3%B6sungsalgorithmen_f%C3%BCr_Irrg%C3%A4rten#Pledge-Algorithmus">Pledge-Algorithmus</a> vorhanden. Der grundlegende Gedanke war, dass der Roboter sich mithilfe der <b>Karte</b> und des <b>ROS Navigation Stack</b> durch das Labyrinth navigiert.</p>
@@ -120,10 +126,10 @@ Umsetzung</h1>
 </div>
 <h2><a class="anchor" id="kartografierung-histogramm"></a>
 Kartografierung</h2>
-<p>In einem eigenen Thread wird die Histogrammkarte <b>parallel</b> zur Navigation aufgezeichnet. Dabei wird jedesmal, sobald eine neue Messung eintrifft, anhand der aktuellen Position ein Eintrag in der Histogrammkarte gemacht (Zellenwert erhöht). Über ein internes ID Mapping wird unterschieden, zu welchem Sensor die eingehende Messung gehört, sodass auch dessen Ausrichtung berücksichtigt werden kann. Über die aktuelle Position des Roboters und mithilfe der Ausrichtung des Sensors wird ermittelt, in welcher Zelle der Histogrammkarte der Wert erhöht werden muss. Zusätzlich wird den Messungen noch ein Fächer hinzugefügt, sodass der Wert aller Zellen erhöht wird, die auf der Kreisbahn des entsprechenden Kreisabschnitts liegen.</p>
+<p>In einem eigenen Thread wird das Belegtheitsgitter <b>parallel</b> zur Navigation aufgezeichnet. Dabei wird jedesmal, sobald eine neue Messung eintrifft, anhand der aktuellen Position ein Eintrag in dem Belegtheitsgitter gemacht (Zellenwert erhöht). Über ein internes ID Mapping wird unterschieden, zu welchem Sensor die eingehende Messung gehört, sodass auch dessen Ausrichtung berücksichtigt werden kann. Über die aktuelle Position des Roboters und mithilfe der Ausrichtung des Sensors wird ermittelt, in welcher Zelle des Belegtheitsgitters der Wert erhöht werden muss. Zusätzlich wird den Messungen noch ein Fächer hinzugefügt, sodass der Wert aller Zellen erhöht wird, die auf der Kreisbahn des entsprechenden Kreisabschnitts liegen.</p>
 <h2><a class="anchor" id="navigation-histogramm"></a>
 Navigation</h2>
-<p>In einem seperaten Thread findet die <b>Navigation</b> statt. Anhand der aufgezeichneten Karte legt ein Navigationsalgorithmus die <b>nächste Zielkoordinate</b> fest, an die sich der Roboter bewegen soll. Diese Koordinate wird an den ROS Navigation Stack (<b>MoveBase</b>) übergeben, sodass dieser den Roboter dorthin navigiert. Da die Histogrammkarte nicht in den ROS Navigation Stack integriert ist, werden Hindernisse in der Histogrammkarte von dem ROS Navigation Stack nicht berücksichtigt. Daher muss der eigene Navigationsalgorithmus darauf achtgeben nur Zielkoordinaten zu übergeben, die nicht durch ein Hindernis blockiert werden.</p>
+<p>In einem seperaten Thread findet die <b>Navigation</b> statt. Anhand der aufgezeichneten Karte legt ein Navigationsalgorithmus die <b>nächste Zielkoordinate</b> fest, an die sich der Roboter bewegen soll. Diese Koordinate wird an den ROS Navigation Stack (<b>MoveBase</b>) übergeben, sodass dieser den Roboter dorthin navigiert. Da das Belegtheitsgitter nicht in den ROS Navigation Stack integriert ist, werden Hindernisse in der Karte von dem ROS Navigation Stack nicht berücksichtigt. Daher muss der eigene Navigationsalgorithmus darauf achtgeben nur Zielkoordinaten zu übergeben, die nicht durch ein Hindernis blockiert werden.</p>
 <h1><a class="anchor" id="probleme-histogramm"></a>
 Probleme</h1>
 <p>Wie schon oben erwähnt wurde dieser ganze Ansatz jedoch <b>verworfen</b>, da die Odometriedaten des Roboters so schlecht waren, dass der Roboter bereits nach kurzer Fahrt komplett die Orientierung verloren hat. Zur Verbesserung der Odometrie sollten eigentlich die Maussensoren genutzt werden. Zu diesem Teil des Projektes finden sich mehr Informationen auf der Seite <a class="el" href="../../da/df2/maussensoren.html">Maussensoren</a>. </p>
@@ -133,7 +139,7 @@ Probleme</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../index.html">Smart Minotaur</a></li><li class="navelem"><a class="el" href="../../db/d93/roboter.html">Roboter</a></li>
-    <li class="footer">Erzeugt am Die Sep 30 2014 12:58:27 für Smart Minotaur von
+    <li class="footer">Erzeugt am Sam Okt 11 2014 17:16:06 für Smart Minotaur von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

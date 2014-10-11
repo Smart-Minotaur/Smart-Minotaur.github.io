@@ -30,8 +30,8 @@ var NAVTREEINDEX =
 ".html",
 "d4/d7a/classminotaur_1_1_maze_navigator.html#ac2584c65468699073960999da80bceb5",
 "d7/d79/pln_minotaur.html#example",
-"db/d8c/classnxt_1_1_telegram_factory.html#a2ae2d4b413f4935b2e35101e8bb17d38",
-"de/d6e/classminotaur_1_1_stay_in_mid_navigator.html#a0d452bfbefa781d0d5f6819288409971"
+"db/d8c/classnxt_1_1_telegram_factory.html",
+"de/d65/classminotaur_1_1_sensor_setting.html#a94cf98ad96721f4b84599c39111dc67a"
 ];
 
 var navTreeSubIndices = new Array();
